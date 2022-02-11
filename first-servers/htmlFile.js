@@ -3,7 +3,6 @@ const fs = require('fs').promises;
 const host = 'localhost';
 const port = 8080;
 
-
 const requestListener = function (req, res) {
     fs.readFile(__dirname + "/index.html")
     .then(contents => {
