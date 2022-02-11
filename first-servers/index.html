@@ -136,24 +136,42 @@
             <h1 class="h1-custom">Välkommen</h1>
             <p class="text1">Här kan du starta din laddning utan registrering!</p>
             <input class = "boxForInput" type="text" id="myText" value="">
-            <button class = "button" onclick="myFunction()">Split</button>
+            <button class = "button" onclick=read()>Split</button>
           </div>
         </div>
           <p id="demo"></p>
       </div>
   </div>
+
+  <!-- -->
   <script>
-          function myFunction() {
-          var x = document.getElementById("myText").value;
-          let url = x.split(/[?]/).pop()
-          let sentences = url.split(/[&]/);
-          document.getElementById("demo").innerHTML = sentences;
-        }
+    function splitURL() {
+    var input = document.getElementById("myText").value;
+    const trailingData = input.split(/[?]/).pop();
+    const test = trailingData.split(/.\w+=/).filter(Boolean); //Bara för test
+    const [ref, providerCode, screen, outletId] = trailingData.split(/.\w+=/).filter(Boolean); //sparar datan i 4 variabler
+    
+    document.getElementById("demo").innerHTML = test;
+  }
+  </script>
+
+<!-- Öppna en hemsida -->
+  <script>
+      function read() {
+        var a = document.getElementById("myText").value;
+  if(a.indexOf("http://") === 0 || a.indexOf("https://") === 0) 
+    splitURL(a);
+    window.open(a);
+    }
   </script>
 </body>
 
 </html>
 
 
+
+<!--
+    https://mobill.se/qr?ref=EON&providerCode=EON&screen=charge&outletId=17028
+ -->
 
 
