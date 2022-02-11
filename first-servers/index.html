@@ -113,14 +113,31 @@
           }
           @media (max-width: 540px) {
             .container{
-              width:100%;
+              width:100vw;
               flex: 1;
-              display: block;
+              display: flex;
+              border-radius: 50px 50px 0 0;
+              background-color: #f1f1f1;
+              box-shadow: 0 10px 20px rgba(0,0,0,0.19), 0 6px 6px rgba(0,0,0,0.23);
             }
             .section-container {
-              display: initial;
+              display: flex;
+              background-color: #ffffff;
+              width:100vw;
+              border-radius: 50px;
+              width: 80vw;
+             /* box-shadow: 0 19px 38px rgba(0,0,0,0.30), 0 15px 12px rgba(0,0,0,0.22);*/
+              box-shadow: 0 10px 20px rgba(0,0,0,0.19), 0 6px 6px rgba(0,0,0,0.23);
             }
-
+            .content{
+              padding: 3em;
+            }
+            .header{
+              height:105px;
+            }
+            body{
+              background-color: rgb(8, 127, 122);
+            }
 
           }
 
@@ -139,6 +156,7 @@
             <p class="text1">Här kan du starta din laddning utan registrering!</p>
             <input class = "boxForInput" type="text" id="myText" value="">
             <button class = "button" onclick=read()>Split</button>
+            <button class = "button" onclick=read()>Next</button>
           </div>
         </div>
           <p id="demo"></p>
