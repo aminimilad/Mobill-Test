@@ -1,7 +1,8 @@
 <!DOCTYPE html>
 <head lang=sv>
   <meta name="viewport" content="width=device-width, initial-scale=1" charset="UTF-8">
-    <title>My Website</title>
+  <link rel="icon" type="image/png" sizes="32x32" href="/home/malte/Mobill_Projekt/Weppapplikation/webbapplikation/first-servers/images/mobill_favicon.png">
+    <title>Mobill charging page</title>
     <style>
       #root {
             height: 100%;
@@ -25,6 +26,7 @@
           width: 100%;
           height:70px;
           display: flex;
+          background-color: white;
           align-items: center;
           justify-content: center;
           background-color: rgb(8, 127, 122);
@@ -63,7 +65,7 @@
         .content{
               padding: 0em 5em 2em 5em;
               margin:0;
-              
+    
         }
         
         .outputText {
@@ -111,18 +113,6 @@
             padding:0em 0em 1em 0em;
 
           }
-          @media (max-width: 540px) {
-            .container{
-              width:100%;
-              flex: 1;
-              display: block;
-            }
-            .section-container {
-              display: initial;
-            }
-
-
-          }
 
     </style>
 </head>
@@ -161,9 +151,10 @@
   <script>
       function read() {
         var a = document.getElementById("myText").value;
-  if(a.indexOf("http://") === 0 || a.indexOf("https://") === 0) 
-    splitURL(a);
+  if(a.indexOf("http://") === 0 || a.indexOf("https://") === 0)  {
     window.open(a);
+  }
+    splitURL(a);
     }
   </script>
 </body>
