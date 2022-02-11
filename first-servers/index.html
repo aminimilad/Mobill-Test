@@ -7,7 +7,7 @@
             height: 100%;
             display: flex;
             flex-direction: column;
-            color:white;
+            color:black;
             font-family: 'lato', sans-serif;
         }
         *,
@@ -18,7 +18,7 @@
         }
         body {
             height: 100vh;
-            background-color: rgb(8, 127, 122)
+            background-color: #f7f7f7;
         }
 
         .header{
@@ -28,6 +28,9 @@
           background-color: white;
           align-items: center;
           justify-content: center;
+          background-color: rgb(8, 127, 122);
+
+
 
         }
         .logo{
@@ -35,10 +38,8 @@
           background-size: 100% 100%;
           width:243px;
           height:50px;
-
           background-repeat: no-repeat;
-          background-color: white;
-          background-image: url("http://localhost:8080/images/mobill-logo.png");
+          background-image: url("https://mobill.se/assets/img/Mobill%20logo_White.svg");
         }
 
 
@@ -54,7 +55,7 @@
         
         .section-container{
           margin:0 auto;
-          background-color:#03615D;
+          background-color:white;
           width: 540px;
           align-items: inherit;
           justify-content: inherit;
@@ -66,7 +67,6 @@
     
         }
         
-
         .outputText {
             width: 100%;
             height: 50%;
@@ -76,13 +76,9 @@
             transform: translate(-50%, -50%);
             color: white;
             text-align: center;
-
-            
         }
         
-
-       
-            .button {
+        .button {
             background-color: black; 
             border: none;
             color: white;
@@ -95,7 +91,6 @@
             border-radius:5px;
 
           }
-
 
           .boxForInput {
             background-color: #e7e7e7; 
@@ -110,8 +105,8 @@
 
           .h1-custom{
             padding:1em 0em;
-            color:white;
             font-family: 'lato', sans-serif;
+            font-weight: 300;
           }
           .text1{
             padding:0em 0em 1em 0em;
@@ -119,11 +114,7 @@
           }
 
     </style>
-
-
 </head>
-
-
 <body>
   <div id="root">
     <div class="header">
@@ -133,7 +124,7 @@
       <div class="container">
         <div class="section-container">
           <div class="content">
-            <h1 class="h1-custom">Välkommen</h1>
+            <h2 class="h1-custom">Välkommen</h2>
             <p class="text1">Här kan du starta din laddning utan registrering!</p>
             <input class = "boxForInput" type="text" id="myText" value="">
             <button class = "button" onclick="myFunction()">Split</button>
