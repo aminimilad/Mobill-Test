@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <head lang=sv>
   <meta name="viewport" content="width=device-width, initial-scale=1" charset="UTF-8">
-  <link rel="icon" type="image/png" sizes="32x32" href="/home/malte/Mobill_Projekt/Weppapplikation/webbapplikation/first-servers/images/mobill_favicon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="C:\Users\milad\OneDrive\Dokument\webbapplikation\first-servers\images\mobill_favicon.png">
     <title>Mobill charging page</title>
     <style>
       #root {
@@ -45,29 +45,43 @@
 
 
         .container {
-            width: 100%;
-            height: 50%;
-            display: flex;
-            flex:1 1;
-            align-items: center;
-            justify-content: center;
-            flex-direction: column;
+            width: 440px;
+            height:  440px;
+            position: relative;
+            background-color: white;
+            margin:auto;
+            overflow: hidden;
+            border-radius:50px;
+            box-shadow: 0 10px 20px rgba(0,0,0,0.19), 0 6px 6px rgba(0,0,0,0.23);
+
+            
         }
-        
         .section-container{
-          margin:0 auto;
-          background-color:white;
-          width: 540px;
-          align-items: inherit;
-          justify-content: inherit;
-          border-radius:5px;
-        }
-        .content{
-              padding: 0em 5em 2em 5em;
-              margin:0;
-    
+          justify-content: center;
+          align-items: center;
+          height: 100%;
+          display: flex;
+          transition: ease-in 0.5s;
+
+
         }
         
+        .section-container #Form1, #Form2, #Form3{
+        position: absolute;
+      
+
+        } 
+        #Form2{
+          
+          transform: translateX(540px);
+        }
+        #Form3{
+          transform: translateX(540px);
+          
+        }
+        #Form1, #Form2, #Form3{
+          transition: 0.5s;
+        }
         .outputText {
             width: 100%;
             height: 50%;
@@ -79,18 +93,22 @@
             text-align: center;
         }
         
-        .button {
+        button {
             background-color: black; 
             border: none;
             color: white;
             font-family: 'lato', sans-serif;
             padding: 15px 32px;
-            text-align: center;
             text-decoration: none;
             display: inline-block;
             font-size: 16px;
             border-radius:5px;
 
+          }
+          .btn-box{
+            width:100%;
+            text-align: center;
+            padding: 2em 0em;
           }
 
           .boxForInput {
@@ -113,40 +131,44 @@
             padding:0em 0em 1em 0em;
 
           }
-<<<<<<< HEAD
-          @media (max-width: 540px) {
-            .container{
-              width:100vw;
-              flex: 1;
-              display: flex;
-              border-radius: 50px 50px 0 0;
-              background-color: #f1f1f1;
-              box-shadow: 0 10px 20px rgba(0,0,0,0.19), 0 6px 6px rgba(0,0,0,0.23);
-            }
-            .section-container {
-              display: flex;
-              background-color: #ffffff;
-              width:100vw;
-              border-radius: 50px;
-              width: 80vw;
-             /* box-shadow: 0 19px 38px rgba(0,0,0,0.30), 0 15px 12px rgba(0,0,0,0.22);*/
-              box-shadow: 0 10px 20px rgba(0,0,0,0.19), 0 6px 6px rgba(0,0,0,0.23);
-            }
-            .content{
-              padding: 3em;
-            }
-            .header{
-              height:105px;
-            }
-            body{
-              background-color: rgb(8, 127, 122);
-            }
+          .s{
+            width: 100%;
+            height: 100%;
+
+          display: flex;
+          }
+
+          @media screen and (max-width: 540px) {
+              body{
+                  background-color: rgb(8, 127, 122); 
+              }
+              .container{
+                box-shadow: 0 6px 40px rgba(0,0,0,0.30), 0 6px 60px rgba(0,0,0,0.1);
+                height:90%;
+                margin-top:0;
+                width:100%;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+              }
+              .section-container{
+                width:100%;
+                height: 50%;
+                background-color: yellow;
+
+              }
+              .s{
+                height: 100%;
+                border-radius: 50px 50px 0 0;
+              }
+
 
           }
-=======
->>>>>>> 48b9ed5bce098cfce320e9fc97941a9ca704b6dd
+
+         
 
     </style>
+    
 </head>
 <body>
   <div id="root">
@@ -154,20 +176,80 @@
       <div class="logo"></div>
       
     </div>
+    <div class="s">
       <div class="container">
         <div class="section-container">
-          <div class="content">
+          <div id="Form1">
+              <h2 class="h1-custom">Välkommen</h2>
+              <input class = "boxForInput" type="text" id="myText" value="">
+              <div class="btn-box">
+                <button type = "button" id="Next1" onclick=read()>Next</button>
+                
+              </div>
+              
+          </div>
+
+          <div id="Form2">
+              <h2 class="h1-custom">Welchowmen</h2>
+              <p id="demo"></p>
+              <div class="btn-box">
+                <button class = "button" id="Back1">Back</button>
+                <button class = "button" id="Next2">Next</button>
+              </div>
+              
+          </div>
+
+          <div id="Form3">
+              <h2 class="h1-custom">WÄELCHOWMEN</h2>
+              <input class = "boxForInput" type="text" id="myText" value="">
+              <div class="btn-box">
+                <button class = "button" id="Back2">Back</button>
+                <button class = "button" id="Next3">Next</button>
+              </div>
+              
+          </div> 
+        </div>
+            
+            
+      </div>
+          <!--
             <h2 class="h1-custom">Välkommen</h2>
             <p class="text1">Här kan du starta din laddning utan registrering!</p>
             <input class = "boxForInput" type="text" id="myText" value="">
             <button class = "button" onclick=read()>Split</button>
             <button class = "button" onclick=read()>Next</button>
-          </div>
-        </div>
-          <p id="demo"></p>
-      </div>
+          -->
+  </div>
   </div>
 
+  <script>
+    var Form1 = document.getElementById("Form1");
+    var Form2 = document.getElementById("Form2");
+    var Form3 = document.getElementById("Form3");
+
+    var Next1= document.getElementById("Next1");
+    var Next2= document.getElementById("Next2");
+    var Back1= document.getElementById("Back1");
+    var Back2= document.getElementById("Back2");
+
+    Next1.onclick = function () {
+      splitURL();
+      Form1.style.transform = "translateX(-540px)";
+      Form2.style.transform = "translateX(0)";
+    }
+    Back1.onclick = function () {
+      Form1.style.transform = "translateX(0)";
+      Form2.style.transform = "translateX(540px)";
+    }
+    Next2.onclick = function () {
+      Form2.style.transform = "translateX(-540px)";
+      Form3.style.transform = "translateX(0)";
+    }
+    Back2.onclick = function () {
+      Form2.style.transform = "translateX(0)";
+      Form3.style.transform = "translateX(540px)";
+    }
+  </script>
   <!-- -->
   <script>
     function splitURL() {
