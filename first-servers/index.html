@@ -28,7 +28,7 @@
 
         .header{
           width: 100%;
-          height:70px;
+          height:100px;
           display: flex;
           background-color: white;
           align-items: center;
@@ -36,35 +36,31 @@
           background-color: rgb(8, 127, 122);
         }
         .logo{
-          
-          background-size: 100% 90%;
+          background-size: 100% 120%;
           width:243px;
           height:50px;
           background-repeat: no-repeat;
           background-image: url("https://mobill.se/assets/img/Mobill%20logo_White.svg");
         }
 
-
+        /*First inner background */
         .container {
             width: 768px;
-            height:  100%;
+            height:  90%;
             position: relative;
             background-color: white;
-            margin:0 auto;
+            margin:10;
             overflow: hidden;
-            border-radius:50px 50px 0 0;
-            box-shadow: 0 10px 20px rgba(0,0,0,0.19), 0 6px 6px rgba(0,0,0,0.23);
-
-
-            
+            border-radius:50px 50px 50px 50px;
+            box-shadow: 0 10px 20px rgba(0,0,0,0.19), 0 6px 6px rgba(0,0,0,0.23);            
         }
+
+
         .section-container{
           align-items: center;
           width: 100%;
           height: 100%;
           display: grid;
-
-
         }
         .mid{
           width:80%;
@@ -74,12 +70,14 @@
         .forms{
           justify-content: center;
           align-items: center;
-          height: 100%;
-          width: 100%;
+          height: 90%;
+          width: 60%;
           display: flex;
           transition: ease-in 0.5s;
-
+          border-radius:50px 50px 50px 50px;
+          margin: 0 auto;
           overflow:hidden;
+          margin-top: 70px;
         }
          .slide-to-unlock{
             position: relative;
@@ -109,12 +107,12 @@ width:95%;
     display: flex;
 }
 
-         .stepper{
+         #stepper{
                 position: relative;
                 display: flex;
                 justify-content: space-between;
               }
-        .stepper::before, .progress{
+        #stepper::before, .progress{
           content: "";
           position: absolute;
           top: 50%;
@@ -154,8 +152,37 @@ width:95%;
             color: black;
           }
 
-        
-       
+        #Form0{
+          position: absolute;
+          justify-content: center;
+          align-items: center;
+          height: 50%;
+          width: 60%;
+          display: grid;
+          transition: ease-in 0.1s;
+          background-color: #d3d3d3; 
+          border-radius:50px 50px 50px 50px;
+          margin: 0 auto;
+          overflow:hidden;
+          margin-top: 120px;
+          transform: translateX(-740px);
+        }
+
+        #Form1{
+          position: absolute;
+          justify-content: center;
+          align-items: center;
+          height: 50%;
+          width: 60%;
+          display: grid;
+          transition: ease-in 0s;
+          background-color: #d3d3d3; 
+          border-radius:50px 50px 50px 50px;
+          margin: 0 auto;
+          overflow:hidden;
+          margin-top: 120px;
+          transform: translateX(0px);
+        }
 
         #Form2{
           position: absolute;
@@ -165,7 +192,7 @@ width:95%;
           transform: translateX(740px);
           
         }
-        #Form1, #Form2, #Form3{
+        #Form0, #Form2, #Form3{
           transition: 0.5s;
         }
         .forms p{
@@ -182,6 +209,17 @@ width:95%;
             color: white;
             text-align: center;
         }
+
+        #Form1 h2{
+          font-size: 20px;
+          text-align: center;
+          font-family: serif;
+        }
+
+        #Form1 p{
+          float: left;
+          
+        }
         
         button {
             background-color: black; 
@@ -194,15 +232,31 @@ width:95%;
             display: inline-block;
             font-size: 16px;
             border-radius:5px;
-
           }
-          .btn-box{
+
+          .btn-box button{
             width:100%;
             text-align: center;
             padding: 2em 0em;
             position:relative;
             display: flex;
           }
+
+          .infoButton {
+            background-color: grey; 
+            border: none;
+            color: white;
+            width: 30%;
+            font-family: 'lato', sans-serif;
+            padding: 15px 32px;
+            text-decoration: none;
+            display: inline-block;
+            font-size: 16px;
+            border-radius:10px;
+            margin-left: 10px;
+          }
+
+    
 
           .boxForInput {
             background-color: white; 
@@ -256,6 +310,7 @@ width:95%;
             margin-top: -50px;
             opacity: 0;
             transition: 1s;
+            z-index: -1;
             
 
           }
@@ -272,21 +327,7 @@ width:95%;
 
 
 
-.amex {
-  background: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADAAAAAeCAMAAABdem3zAAAAA3NCSVQICAjb4U/gAAACi1BMVEUAAAAAAAAAdKIAdqcGdqoDeqkDeKoDe6sFeqoFeqwCeqoGe6wGeasGeqwGe6wFeqwFeqwFeqsGe6oFeawEeqwEeqwFe6wHeaoFe6oFeasFe6wFeawHe6wIfKwJfKwKfa0Lfa0Mfq0Of64Pf64QgK8RgK8Sga8TgbAUgrAVgrAWg7EXg7EYhLEZhLIahbIbhbIdhrMfh7QgiLQhiLQjirUkirUli7YnjLYojLcqjbcsj7gtj7kukLkvkLkwkbkxkboykrozkro0k7s1k7s2lLs3lLw4lbw5lbw6lr07lr08l709l75Amb9Bmr9Dm8BFnMBHncFIncFJnsJKnsJLn8JMn8NNoMNOocRPocRQosRRosVUpMZVpMZWpcZXpcdYpsdZp8dap8dbqMheqclgqslhq8pjrMpkrMtnrsxpr8xqr81tsc5vss5wss9xs89ztNB0tdB1ttF6uNJ8udN9utN+utR/u9SAu9SBvNWCvNWDvdWEvdWGvtaHv9aIv9eKwNeMwdiPw9mQw9mRxNqTxdqUxtuVx9uWx9yXyNyYyNyZyd2ayd2byt2cyt6dy96fzN+gzN+hzd+izeCjzuCkzuCn0OGp0eKq0eKr0uOs0+Ot0+Ov1OSw1eSy1uWz1uW01+W32Oa62ui72+i82+i+3Om/3enC3urE3+vF4OvH4ezI4uzJ4u3K4+3L4+3N5O7O5e7P5e/R5u/S5/DT5/DV6PHW6fHX6fHY6vHa6/Lb7PPc7PPd7fPe7fTf7vTg7vTi7/Xj8PXk8fbm8vbn8vfo8/fp8/fq9Pjr9Pjs9fjt9fnu9vnv9vnw9/rx9/ry+Prz+Pv0+fv1+fv2+vz4+/z5+/37/P38/f7+/v7///+B6xdgAAAAHHRSTlMAARYaJ0FIT1pcYG6YmZyssrPDys3T2tvt9PX+1nJQbwAAAnFJREFUOMtjYOAWESMWiAqwMzBwyZAEOBn4SdMgzCBImgYJUjVI0UeDkoGBrq6BgZ6MhgECqAA56nJ6ICZIWN3AQAeuoevIrvOHDuy6ZLl1366ru3ft2nVl167dJ08cOXHo/P6Dl3Yd33Nm15mdJw+thGnQO2ei2nzDRaZp405Zmd2KxhYWW2TMTeUmJOWv0NOPKVJ1uNEi4329LByuoXKaabvZNZcQw8u5IUANrYuX7pA5eNSxJCk/OPfGBe2ZKotbnAw6kTSs8Axslpnh0mtRr74YqME7LGaHjI6G4uakfOfGG21q3c5hLf7TNDMQGhqUMjN9vFz6O2TCjgA11M+Zs13m4oXIvKT8bOs+i7DMNJks/xuhcggNKQ3b+vfGpS65kLTqVNyRpLi4uP1xl6d09jRPPF+blHC29WB+SsX5PXF1cA0lE/1lWiZOnFg2saZrIgxkgojiyr6JZTLxQFZ5ycSJpRTHdOAmMMiM2Agk103esGnTxiWzwELTVwOJyes29aFqiFtrCQR+x05FuVpaWqcfA3I8FlQDyandjpaWh5KtLI3RNCxTA8ZypHewb7vNrvWKk2QW7wiIzU3YteusXtXWrQvllm+diK5BRl6+4JyW2omJ2qkRiqtknN2VF+UCxWbmKCi5b3GU1fRE16B+4cK5RCe3pH6z6bP3nZOZsyYoMzftwsWrp4+skZt/4kA1mqfjVqgAgcORw/Z23kejg86r7JxXm1AIFOqzVdFLAEoahaNqiDgMBplZQGKNjC6QbD0MA3vmAomN5XTLcaQASQZe0jSIM3CQpoGPgZFHmgT1QkwMDAzMrOxEAjYWBgYAvI9h1MHdhQIAAAAASUVORK5CYII=") #fff;
-}
 
-.visa {
-  background: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADAAAAAeCAMAAABdem3zAAAAA3NCSVQICAjb4U/gAAABvFBMVEUAAADQ0NDa2tra2trZ2dnY2Nja2trt7e3t7e0mM3onNHspNXkqN30rN30sOH4tN3ovO4AwPIAyPoE1QYM3Q4Q4Q4U4RIU5RYY8R4g9SIhCTYtDToxGUY5HUo5JU49JVJBOWJJQW5RSXJVTXZZVX5dXYZhYYplaY5pfaJ1kbaBlbqFoaZFocaNpcqNqc6RtdqZvd6dzcpV0fKp2f6x5ga18g698hK99hK99hbB+hrCAh7GDi7OHjrWIj7aJkLeNk7mNlLqOlbqRl7yUmr6WnL6YnsCbocKepMSjqMekqceprsqrsMysscytss2uss2xts+xttC0uNG1udK1utK2utK3u9O6vdS7v9W8wNa9wda9wdfBxNnDx9rEx9vFyNzFydvHy93Kzd/Mz+DR0+LS1OPT1uTVnV/V1+XX2ebY2NjZuJbZ2+faoVza3Ojc3+rf4evf4ezi5O7j5e7n6fHp6/Lq6/Lr7PPsmC3snTfs7fPunjnu7/Tu7/Xw8fbx8vfy8/f09fj09fn19vn29/r3z5332LH39/r42LD42bL42bP5+fv76tX77dz7+/v7+/387dv9/f7+9ev//v3///9+dhG/AAAACXRSTlMAGxuq7e7u+vsOT6YMAAABbklEQVQ4y+WUV1cTYRQAlwSIsxoLltgLKgZ7AwV777FiL9gT1x4FGxpb0Gg0On/YBx83D+wz8z7nu+fe800QpNKtpTHSmk4FQUt7pu4YqWfaW4L0BBOQSQdt9SRCvS0omYjSOBZ+fB0d/f5T/VQoDHi6cF4b1/Zt6d9fUZ+cLFyMvfDny6vhN3/1EOwegW4/LAHgpb6bBpNr8ZE2PBz+rQvIvrgJ2+2DdaeOba7pXoBbceHAxHvfHIRNHoHjLobLqlZnkIeDcaHIlAeuh6Jb4bb9EG58rh6G4nTWNNnSHFYNZcnrcsKK1d4Qpl63MY9lrmRmE6GHcCdc0Q7mqt5ZAfM9C7uKvfA0LlyASSzUt7Daz+pIyGw7+c+JuPAxCxzV+7DHrq5tOzqhbxA6crlcSE+TS+dhVk0vwRk7AFhb64a76lIWva7EhKEoKqvvo6jqs6sD526UNYoeq5ajR78a4/k/JM5M4pAlTGUqSBrjf5znrWNE0ZcCAAAAAElFTkSuQmCC") #fff;
-}
-
-.mastercard {
-  background: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADAAAAAeCAMAAABdem3zAAAAA3NCSVQICAjb4U/gAAACc1BMVEUAAADQ0NDa2tra2trZ2dnY2Nja2trt7e3t7e3MAADMAQHMBATNCQnOCwvODAzODg7PDwnPERHRGxvSFgfSHh7SHx/SIB7THhDTJCTTJibTJyfUKSnVIAXVLS3VMDDWMjLWNTXWNjbXIQDXLyLXNS7XNzfXOzvYLxbYPT3YPj7Y2NjZOy/ZRUXaSEjaSUnbLQDbLgDbS0vbTU3cSj/cU1PdNADdSjTdVVXdVlbeNwDeW1vfYmLgUDPgZWXgZmbgaGjhXkvhamrhbW3ia2Lib2/jXDfja1njdXXkeHjkeXnke3vlgIDlgYHmg4PmhITmhobnh4fniIjni4voVgDojIzokJDqXADqaiTqlpbqmJjqmZnqmprrnJzrn5/tpqbuqqrura3urq7vsbHvsrLvs7PwbADwbQDwtLTwtbXwt7fxvLzycgDyjULyvr7yv7/zdQDzmVvzn2fzxMTzxcXzx8f2fwD21tb3gQD3x6/3ybL32Nj4hAD43t7439/44OD5iQD54eH54uL65ub65+f76+v7+/v88vL89PT99/f9+Pj9+fn+lwD+/f3/mQD/mgT/nQv/nw//oRT/oRX/oRb/ohj/qCf/qSn/qSr/qy3/rDH/rjX/rjb/sT7/sj//s0L/tEX/tUf/tUj/tkn/t0v/uVD/uVH/u1X/vFj/vVr/vl7/v2H/w2n/xGz/x3P/yHb/yXr/zob/z4j/0Iv/1Zj/1pr/153/2J7/26X/3q7/4LL/4LP/4bX/4bb/5cD/5sL/58P/58T/58X/6sz/7NH/7dL/8d7/8t//9OX/9eb/9ef/9ur/9+v/+vT/+/X//Pj//fz///90HdR0AAAACXRSTlMAGxuq7e7u+vsOT6YMAAABmElEQVQ4y2NgYGJm0SISsDAzMTAwsrG3XiAStLKzMTIwc1wgAbAzM7C2kqKhlZVB6wJJQItSDS3R5orSmo7pPUD2+d2r506bvWzLKdwaOr14OSFAMuXCzqm9ENC//hwODc2KnHDAVdCLALNOYNXQLo9QzylgGoykY+YZbBqckNSrpKamdSPpWINFQw03kgZhJSUlSyQNfUcxNfjzyfFISUDUi5WCQO+EOZOgGmZswNSgY3VBpyPOxJZf1d4uWdxZW9k45+SBtStWTVowffH8o/MxNUgHNsY0entmxrW5R6VnhNb6NlVu6p247uCOs3sOH941DYuG9MTa3JCiGp+S+CzdrrziBOuK5b1L9x8/tG3vko0bsWjQafCKaIhNqon0qyvzqApyKZMtPLZl8/bTR1Zv3Xd6JRYnBeiJChkJGqppWIgoKKi7mTnIVC9YPHnhnHlTJiyaM3EDgWANz87OLicQrCgRx6VvYJBPIOJQk4ZNWD3BpIGS+DhdCSc+0pM3JAOpkpCBaJOnSS5mSC7ISCwqgYUriYUxAINRRW57ksG5AAAAAElFTkSuQmCC") #fff;
-}
-
-.discover {
-  background: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADAAAAAeCAMAAABdem3zAAAAA3NCSVQICAjb4U/gAAACLlBMVEUAAADQ0NDa2tra2trZ2dnY2Nja2trt7e3t7e3vzbDvzbEBAQECAgIDAwMTExMUFBQWFhYYGBgZGRkeHh4jIyMmJiYnJycpKSksLCwtLS0uLi4wMDAzMzM0NDQ3Nzc6Ojo8PDw/Pz9CQkJDQ0NHR0dJSUlKSkpMTExOTk5PT09RUVFWVlZYWFhcXFxgYGBiYmJjY2Nra2tsbGxtbW1wcHBxcXF0dHR1dXV2dnZ3d3d4eHh8fHx9fX1+fn6AgICBgYGCgoKDg4OLi4uMjIyPj4+VlZWWlpabm5udnZ2enp6fn5+hoaGjo6OoqKirq6usrKyvr6+wsLCysrKzs7O4uLi7u7u8vLy9vb2/v7/AwMDBwcHExMTGxsbHx8fJycnLy8vQ0NDR0dHS0tLU1NTW1tbY2NjZ2dnb29vd3d3f39/h4eHi4uLn5+fo6Ojp6enr6+vs7Ozt7e3v7+/x8fHy8vL1giD1giH1gyP1hCT1iS31ii71izD1jDL2kTv2kjz2kz/2lED2lkP2lkT2l0X2mUn2pmH2pmL3m033n1X3oVf3pF73pV739/f4q2n4q2r4rWz4r3D4r3H4sXT4s3f5uoT5u4b5vov5+fn6xJb6yJ36yqD6zKT6+vr7zqj70a372Ln7+/v83sT838b84Mj84sv848785M/85dD89O78/Pz959X96Nb969z9/f3+8+r+9e7+9u/+9/H++PP++vb++vf+/Pn+/Pr+/fz+/v7////OeAUcAAAAC3RSTlMAGxuq7e7u+vv7+w/+RoMAAAGnSURBVDjLY2BgYmZJJRKwMDMxMDCysS/YSSRYwM7GyMDMsZMEwM7MwLqAFA0LWBlSd5IEUumkwc7A0HPBTuvcTAN13535FuqWJTsXdrdP2+IZuHOnR6iNgYHVDgMDsySEBin3QE2NnWJpKk6x8T1iDsku6UvKSktL+4Kld84RzBb3Co9ZyRPnJYikIXHnAr5ssTR9hYCVIfIg8UmlILBCOMFfa6e4jWvQWh5/e0kUDTuFMsTSpvvI6gUog8QngzVsdDRVC9spbu7st5bbmL8ASUNEipEi0ElRRQEyhYL+K/2Tl5cD1U/cmSMgsXOneHRe3krenSpuCA26ckp2xTu1s2xFZSJ3JqiJqKbvXNrbOWPrzp0m3jt36sjJyS2Q35ms0rNz53wSg3VRI2kaVlc1kKRhVU0pSRoWVZaSpGF2RSkpGjZNAMcM0RoW15aSomE9JOKJ1bB1VnUpCRq2z6srLSVew+ZZyMoJalgzpbq0lGgNG+Z2lGKAplQcxcy6uV3lpVhAKyuWgmzLwqktpTgAJzNaUblt2cz+xnocoLmNiw1YuJJYGAMAEKBGzN/0FVAAAAAASUVORK5CYII=") #fff;
-}
 
 .expiry-date-group {
   float: left;
@@ -413,15 +454,18 @@ label {
 }
 
 
+.btn-con {
+  width: 100%;
+  height: 100px;
+  justify-content: space-between;
+  display: flex;
+  justify-content: space-around;
+}
 
 
 
 
-
-
-
-
-
+        /* Screen change when window change*/
           @media screen and (max-width: 540px) {
               body{
                   background-color: rgb(8, 127, 122); 
@@ -453,7 +497,7 @@ label {
     
 </head>
 <!--
-<button type = "button" id="Next1" onclick=read()>Next</button>
+<button type = "button" id="Search" onclick=read()>Next</button>
 <button class = "button" id="Back1">Back</button>
 <button class = "button" id="Next2">Next</button>
 <button class = "button" id="Back2">Back</button>
@@ -470,25 +514,28 @@ label {
         
         <div class="section-container">
           <div class="mid">
-            <div class="stepper">
+            <div id="stepper">
               <div class="progress" id="progress"></div>
               <div class="progress-step progress-step-active" data-title="ID"></div>
               <div class="progress-step" data-title="Välj uttag"></div>
               <div class="progress-step" data-title="Betalning"></div>
             </div>
           </div>
-          <div class="forms">
-            <div id="Form1">
-              <h2 class="h1-custom">Välkommen</h2>
-              <p>Här kan du starta din laddning utan att registera dig</p>
-              <input class = "boxForInput" type="text" id="myText" placeholder="Zon-ID">
-              <div class="btn-box">
-                <button type = "button" id="Next1" onclick=read()>Sök</button>
-              </div>
+        
 
-         
-              
-          </div>
+          <div class="forms">
+            <div id="Form0">
+              <h2 class="h1-custom">Hitta outletID</h2>
+              <p>Här kan du manuellt skriva in outletID för din laddstople </p>
+              <input class = "boxForInput" type="text" id="myText" placeholder="outletID">
+              <div class="btn-box">
+                <button type = "button" id="Search" onclick=read()>Sök</button>
+              </div>    
+           </div>
+
+          <div id="Form1">
+            <h2 class="h1-custom">Zoon information</h2>
+           </div> 
 
           <div id="Form2">
               <h2 class="h1-custom">Välj uttag</h2>
@@ -497,12 +544,12 @@ label {
                 <button class = "button" id="Back1">Föregående</button>
                 <button class = "button" id="Next2">Välj</button>
               </div>
-              
           </div>
 
           <div id="Form3">
               <h2 class="h1-custom">Betalning</h2>
-                    
+          
+         
 
   <div id="Checkout" class="inline">
 
@@ -540,12 +587,6 @@ label {
 
       </form>
   </div>
-
-
-              
-
-
-
               <div class="btn-box">
                 <button class = "button1" id="Back2">Föregående</button>
                 <button class = "button" id="Next3">Betala</button>
@@ -561,9 +602,11 @@ label {
           </div>
         </div>
           
-          
-            
-            
+        <div class="btn-con">
+          <button type = "button" id="InfoBut" class="infoButton" >Stämmer inte informationen?</button>
+          <button type = "button" id="regPaymentButtonID" class="infoButton" >Registera betalningsmetod</button>
+        </div>
+       
         </div>
           <!--
             <h2 class="h1-custom">Välkommen</h2>
@@ -581,11 +624,15 @@ label {
   </div>
 
   <script>
+    var Form0 = document.getElementById("Form0");
     var Form1 = document.getElementById("Form1");
     var Form2 = document.getElementById("Form2");
     var Form3 = document.getElementById("Form3");
 
-    var Next1= document.getElementById("Next1");
+
+    var InfoButton = document.getElementById("InfoBut");
+    var regPaymentButton = document.getElementById("regPaymentButtonID");
+    var Search= document.getElementById("Search");
     var Next2= document.getElementById("Next2");
     var Back1= document.getElementById("Back1");
     var Back2= document.getElementById("Back2");
@@ -596,16 +643,28 @@ label {
 
 const progress = document.getElementById("progress");
     const progressSteps = document.querySelectorAll(".progress-step");
+    var stepper = document.getElementById("stepper");
 
-    Next1.onclick = function () {
+    InfoButton.onclick = function () {
+      Form0.style.transform = "translateX(0)";
+      Form1.style.transform = "translateX(740px)";
+      regPaymentButton.style.opacity = "0";
+      InfoButton.style.opacity = "0";
+      stepper.style.opacity = "0";
+    }
+
+    Search.onclick = function () {
       splitURL();
-      Form1.style.transform = "translateX(-640px)";
-      Form2.style.transform = "translateX(0)";
-      i=2;
+      Form0.style.opacity = "translateX(-740px)";
+      Form1.style.transform = "translateX(0)";
+      i=1;
+      InfoButton.style.opacity = "1";
+      regPaymentButton.style.opacity = "1";
+      stepper.style.opacity = "1";
       updateProgressbar();
     }
     Back1.onclick = function () {
-      Form1.style.transform = "translateX(0)";
+      Form0.style.transform = "translateX(0)";
       Form2.style.transform = "translateX(540px)";
       i=1;
       updateProgressbar();
@@ -627,6 +686,7 @@ const progress = document.getElementById("progress");
         
       
         ff.style.opacity = "1";
+        ff.style.zIndex="0";
     }
 
 
@@ -689,6 +749,11 @@ new Dragdealer(slideToUnlockEl, {
 
 <!--
     https://mobill.se/qr?ref=EON&providerCode=EON&screen=charge&outletId=17028
+
+    <div class="btn-box">
+              <button class = "button" id="InfoNotRight">Stämmer inte informationen?</button>
+              <button class = "button" id="RegDebitCard">Registera betalmedel</button>
+            </div>
  -->
 
 
