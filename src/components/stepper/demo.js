@@ -12,9 +12,10 @@ import EvStationOutlinedIcon from '@mui/icons-material/EvStationOutlined';
 import './demo.css'
 import StepConnector, { stepConnectorClasses } from '@mui/material/StepConnector';
 import Button from '@mui/material/Button';
+
 const CC = styled(StepConnector)(({ theme }) => ({
     [`&.${stepConnectorClasses.alternativeLabel}`]: {
-        top: 29,left:'15%',right:'15%',zIndex:0,
+        top: 59,left:'15%',right:'15%',zIndex:0,
       },
     [`& .${stepConnectorClasses.line}`]: {
         height: 9,

@@ -1,5 +1,5 @@
 .css-qivjh0-MuiStepLabel-label.Mui-active{
-    color:#4f234c !important;
+    color:#4f234c !important; 
 }
 
 .css-16ubnlw-MuiStepLabel-labelContainer{
@@ -10,7 +10,11 @@
     color:#05b2ab !important;
 }
 
-
 .css-qivjh0-MuiStepLabel-label{
     font-family:"Circular" !important;
+    font-size: 15px !important;
+}
+
+.css-f65ace-MuiStack-root {
+    margin-top: 30px;
 }
