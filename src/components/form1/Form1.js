@@ -1,10 +1,18 @@
-import React from 'react'
+import React from 'react';
+import { useState } from 'react';
 import Button from '@mui/material/Button';
 import setActiveStep from '../stepper/demo';
+import './Form1.css';
+import CustomizedSteppers from '../stepper/demo';
+import ReactDOM from 'react';
+import { Fd } from '..';
 
-export const Form1 = () => {
+export default function Form1({transform}){
+
+  
+  
   return (
-    <div id="Form1">
+    <div id='Form1' style={{transform: transform}}>
               <h2 class="h1-custom">Zoninfo</h2>
                 <div id="Zon" class="zon">
 
@@ -12,7 +20,7 @@ export const Form1 = () => {
                     <p class="status">✓ Tillgänglig</p>
                     <p class="ss">burlöv center</p> 
                   </div>
-
+                 
                   <div class="spec">
                     <div class="zonid">
                       <span>zon id</span>
@@ -45,11 +53,12 @@ export const Form1 = () => {
                 </div>
               <p id="demo"></p>
               <div class="btn-box-f1">
-                <button class = "button" id="Back1">fel station?</button>
-                <button class = "buttonforward" id="Next2">Välj</button>
+              
+              
+                
               </div>
-
+              
           </div>
+          
   )
 }
-export default Form1

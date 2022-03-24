@@ -1,0 +1,10 @@
+.forms{
+    justify-content: center;
+     height: 100%;
+   /*  width: 100%;*/
+     display: flex;
+     transition: ease-in 0.5s;
+     padding:0 10%;
+     font-family: 'circular';
+
+   }

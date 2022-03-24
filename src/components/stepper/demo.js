@@ -15,7 +15,7 @@ import Button from '@mui/material/Button';
 
 const CC = styled(StepConnector)(({ theme }) => ({
     [`&.${stepConnectorClasses.alternativeLabel}`]: {
-        top: 59,left:'15%',right:'15%',zIndex:0,
+        top: 79,left:'15%',right:'15%',zIndex:0,
       },
     [`& .${stepConnectorClasses.line}`]: {
         height: 9,
@@ -111,20 +111,16 @@ ColorlibStepIcon.propTypes = {
   icon: PropTypes.node,
 };
 
-
-
-export default function CustomizedSteppers() {
   const steps = ['Zoninfo', 'Betalsätt', 'Börja ladda'];
-  const [activeStep, setActiveStep] = React.useState(0);
-      const handleNext = () => {
-          setActiveStep((activeStep+1));
-        };
-    
+
+export default function CustomizedSteppers({activeStep, handleNext}) {
+
+
      
 
   return (
       
-    <Stack sx={{ width: '100%', color:'red' }} spacing={0}>
+    <Stack sx={{ width: '100%', color:'red'}} spacing={0}>
         
      
       <Stepper alternativeLabel activeStep={activeStep} connector={<CC/>}>
@@ -140,9 +136,7 @@ export default function CustomizedSteppers() {
         ))}
       </Stepper>
 
-      <Button variant="contained" onClick={handleNext}>Hello World</Button>
-
-      
+   
     </Stack>
     
   );
