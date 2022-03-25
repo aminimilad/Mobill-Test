@@ -113,7 +113,7 @@ ColorlibStepIcon.propTypes = {
 
   const steps = ['Zoninfo', 'Betalsätt', 'Börja ladda'];
 
-export default function CustomizedSteppers({activeStep, handleNext}) {
+export default function CustomizedSteppers({activeStep}) {
 
 
      

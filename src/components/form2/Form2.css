@@ -1,4 +1,5 @@
 #Form2{position: absolute;
     transform: translateX(740px);
     background-color: red;
+    transition:1.2s ease-out;
   }

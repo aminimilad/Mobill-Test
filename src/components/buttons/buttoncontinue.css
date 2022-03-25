@@ -1,0 +1,17 @@
+.continue{
+    width:88%;
+    height:65%;
+    justify-self: center;
+    align-self: end;
+    margin-bottom:6%;
+    border-radius: 12px;
+    background-color: #05b2ab;
+    
+  }
+  .continue p{
+    font-family: circular;
+    font-variant: small-caps;
+    font-size: 20px;
+    margin-bottom:2px;
+    color:#e7e7e7;
+  }

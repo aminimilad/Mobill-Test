@@ -7,19 +7,28 @@ import {Section} from './containers';
 import {Forms} from './containers'
 import Button from '@mui/material/Button';
 import CustomizedSteppers from './components/stepper/demo';
-
-
+import {FF} from './containers';
+import { ButtonContinue } from './components';
 const App = () => {
   
   const [activeStep, setActiveStep] = React.useState(0);
-      const handleNext = () => {
-          setActiveStep(activeStep+1);
+      function handleNext(){
+          
         };
 
   const [transform, transformit] = React.useState("TranslateX(0px)");
+  const [transform2, transformit2] = React.useState("TranslateX(740px)");
   
-  const fram = () => {  
+  function fram() {  
     transformit("TranslateX(-740px)");
+    transformit2("TranslateX(0px)");
+    setActiveStep(activeStep+1);
+  };
+
+  function fram2() {  
+    transformit2("TranslateX(740px)");
+    transformit("TranslateX(0px)");
+    setActiveStep(activeStep-1);
   };
   
     
@@ -30,14 +39,17 @@ const App = () => {
       <Header />
         <Section class="section">
         
-          <CustomizedSteppers activeStep={activeStep} handleNext={handleNext}/>
+          <CustomizedSteppers activeStep={activeStep}/>
           <Forms>
-            
-            <Form1 transform={transform}>
-              <button onClick={() => {handleNext();fram();}}>w World</button> 
+         
+            <Form1 transform={transform}> 
+                <ButtonContinue onClick={() => {fram();}}>välj betalsätt</ButtonContinue>
             </Form1>
             
-            <Form2 />
+            <Form2 transform={transform2}>
+              <Button onClick={() => {fram2();}}>w World</Button>
+            </Form2>
+
             <Form3 />
             <Form4 />
           </Forms>
@@ -45,17 +57,9 @@ const App = () => {
         
     </>
     
-
-            
-
-          
-
-      
-
-    
-
   );
 }
 
 
 export default App;
+//<Button onClick={() => {fram();}}>w World</Button> 
