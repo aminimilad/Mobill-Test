@@ -1,0 +1,24 @@
+#Form3{
+    animation: 0.4s ease-out 0s opq;
+    height:100%;
+  }
+#Form3 .head .ss{
+  text-align: center;
+  margin-left:0;
+}
+
+#Form3 .btn-box .continue {
+  align-items: center;
+  margin-top: 20px;
+}
+.headrow{
+  justify-content: center;
+}
+  @keyframes opq {
+    0% {
+      opacity: 0;
+    }
+    100% {
+      opacity: 1;
+    }
+  }

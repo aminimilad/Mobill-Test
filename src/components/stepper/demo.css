@@ -15,6 +15,26 @@
     font-size: 15px !important;
 }
 
+.css-qivjh0-MuiStepLabel-label.MuiStepLabel-alternativeLabel{
+    margin-top:8px !important;
+}
+
 .css-f65ace-MuiStack-root {
     margin-top: 50px;
 }
+
+.d{
+    transition:0.4s ease-out;
+    animation: 0.4s ease-out 0s opa;
+}
+    
+
+       
+        @keyframes opa {
+          0% {
+            opacity: 0;
+          }
+          100% {
+            opacity: 1;
+          }
+        }

@@ -1,17 +1,17 @@
 import React from 'react'
 import './Form2.css';
 import '../form1/Form1';
-export default function Form2({transform,...props}) {
+export default function Form2({opacity2,...props}) {
   return (
-    <div id="Form2"style={{transform: transform}}><h2 class="h1-custom">Betalning</h2>
-    <div id="Aw">
-      <video id="e" src="https://c.tenor.com/SSrY_oxMoccAAAAC/50cent-not-funny.gif"
-       autoplay loop width="200px" height="200px"></video>
-
+    <div id="Form2" style={{opacity:opacity2}}>
+      <div class="form1c">
+        <div class="headercontainer">
+          <h2 class="h1-custom">Välj ett betalningsalternativ</h2>
+        </div>
+        {props.children}
+      </div>
+      
     </div>
     
-    <div class="btn-box">
-     {props.children}
-    </div></div>
   )
-  }
+}

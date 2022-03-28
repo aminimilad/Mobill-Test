@@ -113,31 +113,34 @@ ColorlibStepIcon.propTypes = {
 
   const steps = ['Zoninfo', 'Betalsätt', 'Börja ladda'];
 
-export default function CustomizedSteppers({activeStep}) {
+export default function CustomizedSteppers({activeStep, opacity}) {
 
 
      
 
   return (
-      
-    <Stack sx={{ width: '100%', color:'red'}} spacing={0}>
+      <div class="d" style={{opacity:opacity}}>
+
+      <Stack sx={{ width: '100%', color:'red'}} spacing={0}>
         
      
-      <Stepper alternativeLabel activeStep={activeStep} connector={<CC/>}>
-        
-      <CC/>
-      </Stepper>
-      <Stepper alternativeLabel activeStep={activeStep} connector={<ColorlibConnector/>}>
-        
-        {steps.map((label) => (
-          <Step key={label}>
-            <StepLabel StepIconComponent={ColorlibStepIcon}>{label}</StepLabel>
-          </Step>
-        ))}
-      </Stepper>
-
-   
-    </Stack>
+        <Stepper alternativeLabel activeStep={activeStep} connector={<CC/>}>
+          
+        <CC/>
+        </Stepper>
+        <Stepper alternativeLabel activeStep={activeStep} connector={<ColorlibConnector/>}>
+          
+          {steps.map((label) => (
+            <Step key={label}>
+              <StepLabel StepIconComponent={ColorlibStepIcon}>{label}</StepLabel>
+            </Step>
+          ))}
+        </Stepper>
+  
+     
+      </Stack>
+      </div>
+    
     
   );
 }

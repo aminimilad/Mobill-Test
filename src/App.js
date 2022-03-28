@@ -1,65 +1,178 @@
-
-import './App.css';
-import React from 'react';
-import {Form1, Form2, Form3, Form4} from './components';
-import {Header} from './containers';
-import {Section} from './containers';
-import {Forms} from './containers'
-import Button from '@mui/material/Button';
-import CustomizedSteppers from './components/stepper/demo';
-import {FF} from './containers';
-import { ButtonContinue } from './components';
+import "./App.css";
+import React from "react";
+import { Form1, Form2, Form3, Form4 } from "./components";
+import { Header } from "./containers";
+import { Section } from "./containers";
+import { Forms } from "./containers";
+import CustomizedSteppers from "./components/stepper/demo";
+import { ButtonContinue } from "./components";
+import { QrReader } from "react-qr-reader";
+import { QRscanButton } from "./components";
+import { Zon } from "./containers";
+import "./components/buttons/buttoncontinue.css";
 const App = () => {
-  
   const [activeStep, setActiveStep] = React.useState(0);
-      function handleNext(){
-          
-        };
 
-  const [transform, transformit] = React.useState("TranslateX(0px)");
-  const [transform2, transformit2] = React.useState("TranslateX(740px)");
-  
-  function fram() {  
-    transformit("TranslateX(-740px)");
-    transformit2("TranslateX(0px)");
-    setActiveStep(activeStep+1);
-  };
+  const [opacity, opacitySet] = React.useState(1);
+  const [opacity2, opacitySet2] = React.useState(1);
+  const [opacity3, opacitySet3] = React.useState(1);
+  const [isQrActive, setQrState] = React.useState(false);
 
-  function fram2() {  
-    transformit2("TranslateX(740px)");
-    transformit("TranslateX(0px)");
-    setActiveStep(activeStep-1);
-  };
-  
+  const show = (
+    <Zon>
+      <QRscanButton onClick={QR} />
+    </Zon>
+  );
+  const abahawas = <div class="qrread"><QrReader /></div>;
+
+  const one = (
+    <>
+      <div class="btn-text">... (:</div>
+      <ButtonContinue
+        onClick={() => {
+          QR();
+        }}
+        style={{ backgroundColor: "#d54040" }}
+      >
+        <p>avbryt</p>
+      </ButtonContinue>
+    </>
+  );
+
+  const two = (
+    <>
+      <div class="btn-text">
+        Se till att laddningskabeln redan nu är inkopplad (test)
+      </div>
+      <ButtonContinue
+        onClick={() => {
+          fram();
+        }}
+      >
+        <p>välj betalsätt</p>
+      </ButtonContinue>
+    </>
+  );
+
+  function QR() {
+
+    opacitySet(0);
+    setTimeout(() => {
+
+      opacitySet(1);
+
+      setQrState(!isQrActive);
+    }, 400);
     
+    
+  }
+
+  function fram() {
+    opacitySet(0);
+
+    setTimeout(() => {
+      opacitySet(1);
+      setActiveStep(activeStep + 1);
+    }, 400);
+  }
+
+  function fram2() {
+    opacitySet2(0);
+
+    setTimeout(() => {
+      setActiveStep(activeStep + 1);
+    }, 400);
+  }
+
+  function fram3() {
+    opacitySet3(0);
+
+    setTimeout(() => {
+      setActiveStep(activeStep + 1);
+    }, 400);
+  }
+
+  function getStepContent(step) {
+    //PRELIMINÄR - stor del av koden kmr att inkapslas -----------------------------------------------------------
+    switch (step) {
+      case 0:
+        return (
+          <Form1 activeStep={activeStep} opacity={opacity}>
+            {isQrActive ? abahawas : show}
+            <div class="btn-box">{isQrActive ? one : two}</div>
+          </Form1>
+        );
+      case 1:
+        return (
+          <Form2 activeStep={activeStep} opacity2={opacity2}>
+            <div class="btn-box">
+              <ButtonContinue
+                onClick={() => {
+                  fram2();
+                }}
+              >
+                <div class="payex"></div>
+                <div class="text">
+                  <p>Kortregistrering</p>
+                  <p class="alttxt">via Swedbank Pay</p>
+                </div>
+              </ButtonContinue>
+
+              <div class="btn-text">
+                <p class="eller">eller</p>
+              </div>
+
+              <ButtonContinue>
+                <div class="swish"></div>
+                <div class="text">
+                  <p>Swish</p>
+                  <p class="alttxt">Betala med Swish</p>
+                </div>
+              </ButtonContinue>
+            </div>
+          </Form2>
+        );
+
+      case 2:
+        return (
+          <Form3 activeStep={activeStep}>
+            <div class="btn-box">
+              <div class="btn-text">
+                Genom att trycka på börja ladda så godkänner du Mobills användarvillkor
+              </div>
+              <ButtonContinue
+                onClick={() => {
+                  fram3();
+                }}
+              >
+                <p>välj betalsätt</p>
+              </ButtonContinue>
+            </div>
+          </Form3>
+        );
+      case 4:
+        return (
+          <Form4 activeStep={activeStep}>
+            
+          </Form4>
+        );
+      default:
+        throw new Error("Mis-step!");
+    }
+  }
+
   return (
     //STEPPER under section //Button css separat, button navigation transform
-    //lägg button från rad 37 på rad 39 så funkar det! --------------------------------------------------------- den ska va på rad 37 egentligen
-    <>  
+    <>
       <Header />
-        <Section class="section">
-        
-          <CustomizedSteppers activeStep={activeStep}/>
-          <Forms>
-         
-            <Form1 transform={transform}> 
-                <ButtonContinue onClick={() => {fram();}}>välj betalsätt</ButtonContinue>
-            </Form1>
-            
-            <Form2 transform={transform2}>
-              <Button onClick={() => {fram2();}}>w World</Button>
-            </Form2>
-
-            <Form3 />
-            <Form4 />
-          </Forms>
-        </Section>
-        
+      <Section class="section">
+        <CustomizedSteppers activeStep={activeStep} opacity={!isQrActive ? opacity3 : 0} />
+        <Forms>{getStepContent(activeStep)}</Forms>
+      </Section>
     </>
-    
   );
-}
-
+};
 
 export default App;
-//<Button onClick={() => {fram();}}>w World</Button> 
+//Ändra klassnamn
+//<Button onClick={() => {fram();}}>w World</Button>

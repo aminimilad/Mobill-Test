@@ -3,7 +3,7 @@ import './buttoncontinue.css'
 
 function buttoncontinue({children, ...buttonProps}) {
   return (
-    <button class="continue" {...buttonProps}><p>{children}</p></button>
+    <button class="continue" {...buttonProps}>{children}</button>
   )
 }
 
