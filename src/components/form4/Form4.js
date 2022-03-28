@@ -1,8 +1,13 @@
-import React from 'react'
+import React from 'react';
+import './Form4.css';
+import "swiper/css/bundle";
+import App from './Swiper';
 
-export const Form4 = () => {
+export default function Form4({ opacity, ...props }) {
+  const [data, setData] = React.useState('No result');
   return (
-    <div>Form4</div>
-  )
+    App()
+  );
 }
-export default Form4
+
+

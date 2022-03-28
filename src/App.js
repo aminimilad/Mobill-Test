@@ -6,10 +6,12 @@ import { Section } from "./containers";
 import { Forms } from "./containers";
 import CustomizedSteppers from "./components/stepper/demo";
 import { ButtonContinue } from "./components";
+import { StopCharging } from "./components";
 import { QrReader } from "react-qr-reader";
 import { QRscanButton } from "./components";
 import { Zon } from "./containers";
 import "./components/buttons/buttoncontinue.css";
+
 const App = () => {
   const [activeStep, setActiveStep] = React.useState(0);
 
@@ -63,8 +65,8 @@ const App = () => {
 
       setQrState(!isQrActive);
     }, 400);
-    
-    
+
+
   }
 
   function fram() {
@@ -97,10 +99,23 @@ const App = () => {
     switch (step) {
       case 0:
         return (
-          <Form1 activeStep={activeStep} opacity={opacity}>
-            {isQrActive ? abahawas : show}
-            <div class="btn-box">{isQrActive ? one : two}</div>
-          </Form1>
+          // <Form1 activeStep={activeStep} opacity={opacity}>
+          //   {isQrActive ? abahawas : show}
+          //   <div class="btn-box">{isQrActive ? one : two}</div>
+          // </Form1>
+          <Form4>
+            <div class="btn-box">
+              <div class="btn-text">
+                Tryck för att avsluta sessionen
+              </div>
+              <StopCharging
+                onClick={() => {
+                }}
+              >
+                <p>Avsluta laddning</p>
+              </StopCharging>
+            </div>
+          </Form4>
         );
       case 1:
         return (
@@ -153,7 +168,7 @@ const App = () => {
       case 4:
         return (
           <Form4 activeStep={activeStep}>
-            
+
           </Form4>
         );
       default:
