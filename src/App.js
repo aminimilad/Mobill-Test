@@ -11,6 +11,7 @@ import { QrReader } from "react-qr-reader";
 import { QRscanButton } from "./components";
 import { Zon } from "./containers";
 import "./components/buttons/buttoncontinue.css";
+import Form5 from "./components/form5/Form5";
 
 const App = () => {
   const [activeStep, setActiveStep] = React.useState(0);
@@ -103,19 +104,23 @@ const App = () => {
           //   {isQrActive ? abahawas : show}
           //   <div class="btn-box">{isQrActive ? one : two}</div>
           // </Form1>
-          <Form4>
-            <div class="btn-box">
-              <div class="btn-text">
-                Tryck för att avsluta sessionen
-              </div>
-              <StopCharging
-                onClick={() => {
-                }}
-              >
-                <p>Avsluta laddning</p>
-              </StopCharging>
-            </div>
-          </Form4>
+          // <Form4>
+          //   <div class="btn-box">
+          //     <div class="btn-text">
+          //       Tryck för att avsluta sessionen
+          //     </div>
+          //     <StopCharging
+          //       onClick={() => {
+          //       }}
+          //     >
+          //       <p>Avsluta laddning</p>
+          //     </StopCharging>
+          //   </div>
+          // </Form4>
+
+          <Form5>
+
+          </Form5>
         );
       case 1:
         return (
