@@ -1,6 +1,7 @@
 #Form3{
     animation: 0.4s ease-out 0s opq;
     height:100%;
+    font-family: 'circular';
   }
 #Form3 .head .ss{
   text-align: center;
