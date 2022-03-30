@@ -2,7 +2,7 @@
   "name": "webbapplikation",
   "version": "0.1.0",
   "private": false,
-  "homepage": "https://aminimilad.github.io",
+  "homepage": "https://aminimilad.github.io/Mobill-Test",
   "dependencies": {
     "-": "^0.0.1",
     "@emotion/react": "^11.8.2",
