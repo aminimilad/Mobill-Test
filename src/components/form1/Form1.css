@@ -1,31 +1,28 @@
 
-.form1c{
-  height: 100%;
-  width: 600px;
-  display: grid;
-  
-}
+
+
 #Form1{
 
   font-family: circular;
   transition:0.4s ease-out;
+  
 }
 
 .btn-text{
 
   align-self: center;
-  width:80%;
-  margin-left:10%;
+
+
 
 }
 
 .btn-box{
-            width:100%;
-            height: 20vh;
+            
+            padding:5vh;
             text-align: center;
-            position: relative;
+
             display: grid;
-            margin-top:5vh;
+
             background-color: #d7d7d7;
             border-radius: 15px;
             align-content:center;
@@ -35,7 +32,8 @@
           }
          #Form1 .btn-box .continue{
             align-items: center; 
-            margin-top:20px;
+            padding:2%;
+
            
             
           }
@@ -63,12 +61,7 @@
 }
     
 
-          @media screen and (max-width: 768px){
-            .form1c{
-                width:85vw;
-            }
-        
-        }
+          
         @keyframes opa {
           0% {
             opacity: 0;

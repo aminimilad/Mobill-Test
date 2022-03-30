@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import "./StopWatch.css";
-import Timer from "./Timer";
+import Timer from "./Timer.jsx";
 
 function StopWatch() {
     const [isActive, setIsActive] = useState(true);

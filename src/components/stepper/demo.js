@@ -15,7 +15,7 @@ import Button from '@mui/material/Button';
 
 const CC = styled(StepConnector)(({ theme }) => ({
     [`&.${stepConnectorClasses.alternativeLabel}`]: {
-        top: 79,left:'15%',right:'15%',zIndex:0,
+        display:'flex', left:'15%',right:'15%',zIndex:0,
       },
     [`& .${stepConnectorClasses.line}`]: {
         height: 9,
@@ -29,7 +29,7 @@ const CC = styled(StepConnector)(({ theme }) => ({
 
 const ColorlibConnector = styled(StepConnector)(({ theme }) => ({
   [`&.${stepConnectorClasses.alternativeLabel}`]: {
-    top: 29,
+    top: 26,
   },
   [`&.${stepConnectorClasses.active}`]: {
     [`& .${stepConnectorClasses.line}`]: {
@@ -59,8 +59,8 @@ const ColorlibStepIconRoot = styled('div')(({ theme, ownerState }) => ({
   zIndex: 1,
   color: '#fff',
   transition: '0.3s ease-in',
-  width: 65,
-  height: 65,
+  width: 58.5,
+  height: 58.5,
   display: 'flex',
   borderRadius: '50%',
   justifyContent: 'center',
@@ -121,13 +121,14 @@ export default function CustomizedSteppers({activeStep, opacity}) {
   return (
       <div class="d" style={{opacity:opacity}}>
 
-      <Stack sx={{ width: '100%', color:'red'}} spacing={0}>
+      <Stack sx={{ width: '100%', color:'red'}}>
         
      
-        <Stepper alternativeLabel activeStep={activeStep} connector={<CC/>}>
+        {/* <Stepper alternativeLabel activeStep={activeStep} connector={<CC/>}>
           
         <CC/>
-        </Stepper>
+        
+        </Stepper> */}
         <Stepper alternativeLabel activeStep={activeStep} connector={<ColorlibConnector/>}>
           
           {steps.map((label) => (

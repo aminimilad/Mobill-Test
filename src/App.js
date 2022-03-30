@@ -12,6 +12,7 @@ import { QRscanButton } from "./components";
 import { Zon } from "./containers";
 import "./components/buttons/buttoncontinue.css";
 import Form5 from "./components/form5/Form5";
+import CircularProgress from '@mui/material/CircularProgress';
 
 const App = () => {
   const [activeStep, setActiveStep] = React.useState(0);
@@ -20,13 +21,19 @@ const App = () => {
   const [opacity2, opacitySet2] = React.useState(1);
   const [opacity3, opacitySet3] = React.useState(1);
   const [isQrActive, setQrState] = React.useState(false);
-
+  const [chargeState, setChargeState] = React.useState(false);
+  const [text, setText] = React.useState(<p>Genom att trycka på börja ladda så godkänner du Mobills användarvillkor</p>);
   const show = (
     <Zon>
       <QRscanButton onClick={QR} />
     </Zon>
   );
-  const abahawas = <div class="qrread"><QrReader /></div>;
+  const qrdiv = <div class="qrread"><QrReader /></div>;
+
+  
+  
+
+
 
   const one = (
     <>
@@ -57,7 +64,7 @@ const App = () => {
     </>
   );
 
-  function QR() {
+  function QR() {  //metoden opacityset o setQrstate körs efter 400ms - osv
 
     opacitySet(0);
     setTimeout(() => {
@@ -68,6 +75,26 @@ const App = () => {
     }, 400);
 
 
+  }
+
+  function charge(){
+    //TEXT initiate med timer - poll
+    setText(<p>kontrollerar anslutningen till laddplattform...</p>);
+
+    setTimeout(() => {
+      beginCharge();
+      
+    }, 5000);
+    
+  }
+
+  function beginCharge(){
+    setText(<p>påbörjar laddningen...</p>);
+    setChargeState(!chargeState);
+    setTimeout(() => {
+
+      fram3();
+    }, 3000);
   }
 
   function fram() {
@@ -92,7 +119,7 @@ const App = () => {
 
     setTimeout(() => {
       setActiveStep(activeStep + 1);
-    }, 400);
+    },400);
   }
 
   function getStepContent(step) {
@@ -100,27 +127,10 @@ const App = () => {
     switch (step) {
       case 0:
         return (
-          // <Form1 activeStep={activeStep} opacity={opacity}>
-          //   {isQrActive ? abahawas : show}
-          //   <div class="btn-box">{isQrActive ? one : two}</div>
-          // </Form1>
-          // <Form4>
-          //   <div class="btn-box">
-          //     <div class="btn-text">
-          //       Tryck för att avsluta sessionen
-          //     </div>
-          //     <StopCharging
-          //       onClick={() => {
-          //       }}
-          //     >
-          //       <p>Avsluta laddning</p>
-          //     </StopCharging>
-          //   </div>
-          // </Form4>
-
-          <Form5>
-
-          </Form5>
+          <Form1 activeStep={activeStep} opacity={opacity}>
+            {isQrActive ? qrdiv : show}
+            <div class="btn-box">{isQrActive ? one : two}</div>
+           </Form1>
         );
       case 1:
         return (
@@ -155,27 +165,45 @@ const App = () => {
 
       case 2:
         return (
-          <Form3 activeStep={activeStep}>
+          <Form3 activeStep={activeStep} opacity3={opacity3}>
             <div class="btn-box">
               <div class="btn-text">
-                Genom att trycka på börja ladda så godkänner du Mobills användarvillkor
+               {text}
               </div>
               <ButtonContinue
                 onClick={() => {
-                  fram3();
+                  charge();
                 }}
               >
-                <p>välj betalsätt</p>
+                <p>börja ladda</p>
+                <CircularProgress color="success" style={{display: chargeState ? 'block' : 'none'}}/>
               </ButtonContinue>
             </div>
           </Form3>
         );
-      case 4:
+      case 3:
         return (
-          <Form4 activeStep={activeStep}>
-
-          </Form4>
+           <Form4>
+             <div class="btn-box">
+               <div class="btn-text">
+                 Tryck för att avsluta sessionen
+             </div>
+               <StopCharging
+               onClick={() => {
+                 fram();
+               }}
+             >
+              <p>Avsluta laddning</p>
+            </StopCharging>
+           </div>
+         </Form4>
         );
+      case 4: 
+               return(
+                <Form5>
+
+                </Form5>
+               );
       default:
         throw new Error("Mis-step!");
     }

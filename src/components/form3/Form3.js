@@ -2,11 +2,14 @@ import React from 'react'
 import './Form3.css';
 import '../../containers/forms/Forms.css'
 
-export default function Form3(props) {
+export default function Form3({opacity3,...props}) {
   return (
+
     <forms>
-      <div id="Form3">
-        <div class="form1c">
+      <div id="Form3" style={{opacity:opacity3}}>
+          <div class="form1c">
+
+        
           <div id="Zon" class="zon">
             <div id="Head" class="head">
               <div class="headrow">

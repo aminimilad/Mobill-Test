@@ -5,8 +5,9 @@ import './buttoncontinue.css'
 function buttoncontinue({ children, ...buttonProps }) {
   return (
     <button class="continue" {...buttonProps}>{children}
-      <CircularProgress color="success" />
+      
     </button>
+
   )
 }
 
