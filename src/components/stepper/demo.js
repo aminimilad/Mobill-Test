@@ -127,6 +127,11 @@ export default function CustomizedSteppers({activeStep, opacity}) {
       '& .css-qivjh0-MuiStepLabel-label.MuiStepLabel-alternativeLabel':{
         marginTop:'8px',
       },
+      '& .css-farnub-MuiStepLabel-label':{
+        fontFamily:'Circular'},
+        '& .css-farnub-MuiStepLabel-label.MuiStepLabel-alternativeLabel':{
+          marginTop:'8px',
+        },
     }}>
         
      

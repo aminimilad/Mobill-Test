@@ -84,11 +84,71 @@ float: right;
 background-size: 100% 100%;
 
 }
-@media (min-width: 768px) and (max-width: 979px) and (max-height:900px) { 
 
+
+@media (min-width: 768px) and (max-width: 979px) and (min-height:900px) { 
+    .headrow{
+        padding-bottom:3%;
+    }
+    .status .css-i4bv87-MuiSvgIcon-root {
+        font-size: 2.4em;
+    }
+    .status p{
+        font-size:1.6rem;
+    }
+    
     .ss{
-        
+        padding: 5% 0;
+        font-size:2.5rem;
+    }
+    .zonid, .uttagid, .pris {
+        font-size: 120%;
+    }
+    .a {
+        font-size: 2.1rem;
+        margin-top: 4px;
     }
 
-
+    .provider{
+        width:95px;
+        height:27px;
+    }
 }
+@media (min-width: 320px) and (max-width: 530px) and (min-height: 560px) and (max-height:899px){ 
+        
+   
+    
+    .status p{
+        font-size:5vw;
+        margin-top:1px;
+    }
+    
+    .ss{
+        padding: 5% 0;
+        font-size:6.5vw;
+    }
+    .zonid, .uttagid, .pris {
+        font-size: 120%;
+    }
+    .a {
+        font-size: 2.1rem;
+        margin-top: 4px;
+    }
+
+    .provider{
+        width:95px;
+        height:27px;
+    }
+}
+@media (max-width: 767px) and (min-height: 980px) { 
+    
+}
+
+@media (max-width: 530px) { 
+    
+ }
+
+ @media (max-width: 360px) { 
+    
+    
+ }

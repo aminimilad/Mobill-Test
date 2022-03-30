@@ -53,6 +53,10 @@
             .css-lr0alj-MuiStepConnector-root.MuiStepConnector-alternativeLabel{
                 margin-top:97px !important;
             }
+            .css-12o5i44.MuiStepConnector-alternativeLabel{
+                margin-top:97px !important;
+            }
+            
         }
         @media (max-width: 767px) and (min-height: 980px) { 
                 
@@ -69,6 +73,10 @@
             .css-lr0alj-MuiStepConnector-root.MuiStepConnector-alternativeLabel{
                 margin-top:102px !important;
             }
+            .css-12o5i44.MuiStepConnector-alternativeLabel{
+                margin-top:102px !important;
+            }
+            
         }
         @media (max-width: 767px) and (min-height: 980px) { 
             .css-qivjh0-MuiStepLabel-label.MuiStepLabel-alternativeLabel{
@@ -91,6 +99,10 @@
             .css-lr0alj-MuiStepConnector-root.MuiStepConnector-alternativeLabel{
                 margin-top:50px !important;
             }
+            .css-12o5i44.MuiStepConnector-alternativeLabel{
+                margin-top:50px !important;
+            }
+            
             .d{
                 margin-top:40px;
             }
@@ -104,4 +116,8 @@
             .css-lr0alj-MuiStepConnector-root.MuiStepConnector-alternativeLabel{
                 margin-top:45px !important;
             }
+            .css-12o5i44.MuiStepConnector-alternativeLabel{
+                margin-top:45px !important;
+            }
+            
          }
