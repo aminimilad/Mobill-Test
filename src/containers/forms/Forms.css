@@ -11,7 +11,7 @@
 .form1c{
     display: grid;
     height: 100%;
-    align-items:center;
+    align-content: space-evenly;
 
 }
 #Form1{

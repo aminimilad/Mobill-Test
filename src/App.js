@@ -28,7 +28,8 @@ const App = () => {
       <QRscanButton onClick={QR} />
     </Zon>
   );
-  const qrdiv = <div class="qrread"><QrReader facingMode={'environment'}/></div>;
+  const qrdiv = <div class="qrread">
+    <QrReader style={{height:'100%', width:'100%'}} facingMode={'environment'}/></div>;
 
   const one = (
     <>

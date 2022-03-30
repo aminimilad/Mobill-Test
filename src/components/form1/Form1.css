@@ -11,14 +11,14 @@
 .btn-text{
 
   align-self: center;
-
+  padding: 0 0 5% 0;
 
 
 }
 
 .btn-box{
-          
-            height:100px;
+            padding:5%;
+            
             text-align: center;
             display: grid;
             background-color: #d7d7d7;
@@ -29,6 +29,9 @@
 
          #Form1 .btn-box .continue{
             align-items: center;
+            width:100%;
+            height:4rem;
+            justify-content: center;
           }
 
           .btn-cont{
@@ -57,7 +60,15 @@
   border-radius:10px;
   animation: 0.4s ease-out 0s opa;
 }
-    
+section{
+  width:100%;
+  height: 100%;
+  padding:0;
+}
+  section div{
+    padding-top:0 !important;
+    height:100%;
+  }
 
           
         @keyframes opa {
@@ -68,6 +79,6 @@
             opacity: 1;
           }
         }
-      
+       
 
 

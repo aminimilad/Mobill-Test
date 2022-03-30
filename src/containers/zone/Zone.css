@@ -33,7 +33,7 @@ font-size:2.15em;
 }
 .status p{
 align-self: center;
-
+margin-left:5px;
 font-size:1.42rem;
 }
 
@@ -41,14 +41,14 @@ font-size:1.42rem;
     width:100%;
 
     font-variant: small-caps;
-    font-size: 1.8rem;
-    padding:4% 0;
+    font-size: 2rem;
+    padding:2% 0;
 }
 
 .spec{
 width:100%;
 display: flex;
-padding:3% 0;
+padding:2% 0;
 text-align: center;
 
 }
@@ -84,4 +84,11 @@ float: right;
 background-size: 100% 100%;
 
 }
+@media (min-width: 768px) and (max-width: 979px) and (max-height:900px) { 
 
+    .ss{
+        
+    }
+
+
+}
