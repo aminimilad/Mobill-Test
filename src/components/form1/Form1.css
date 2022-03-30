@@ -1,0 +1,73 @@
+
+
+
+#Form1{
+
+  font-family: circular;
+  transition:0.4s ease-out;
+  
+}
+
+.btn-text{
+
+  align-self: center;
+
+
+
+}
+
+.btn-box{
+          
+            height:100px;
+            text-align: center;
+            display: grid;
+            background-color: #d7d7d7;
+            border-radius: 15px;
+            align-content:center;
+            box-shadow: 0 10px 20px rgba(0,0,0,0.1), 0 6px 6px rgba(0,0,0,0.15);
+          }
+
+         #Form1 .btn-box .continue{
+            align-items: center;
+          }
+
+          .btn-cont{
+            width: 100%;
+            display: grid;
+          }
+
+          
+
+.h1-custom{
+
+
+            font-weight: 300;
+            font-size:2em;
+            text-align: center;
+          }
+
+.qrread{
+  height:311px;
+  margin-top:5vh;
+  width:100%;
+}
+.qrread video{
+  height:311px !important;
+  object-fit: cover !important;
+  border-radius:10px;
+  animation: 0.4s ease-out 0s opa;
+}
+    
+
+          
+        @keyframes opa {
+          0% {
+            opacity: 0;
+          }
+          100% {
+            opacity: 1;
+          }
+        }
+      
+
+

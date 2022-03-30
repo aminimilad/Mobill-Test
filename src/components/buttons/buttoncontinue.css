@@ -1,0 +1,22 @@
+.continue{
+
+    justify-self: center;
+    align-self: end;
+    border-radius: 12px;
+    background-color:#118581;
+    box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.1), 0px 8px 15px rgba(0, 0, 0, 0.2);
+    transition: all 0.3s ease 0s;
+    display: flex;
+  }
+  .continue:hover {
+    background-color: #05b2ab;
+    box-shadow: 0px 15px 20px rgba(8, 220, 235, 0.2);
+    color: #fff;
+  }
+  .continue p{
+    font-family: circular;
+    font-variant: small-caps;
+    font-size: 23px;
+    margin-bottom:2px;
+    color:#e7e7e7;
+  }

@@ -1,0 +1,42 @@
+.css-qivjh0-MuiStepLabel-label.Mui-active{
+    color:#4f234c !important; 
+}
+
+.css-16ubnlw-MuiStepLabel-labelContainer{
+    color:#000000 !important;
+}
+
+.css-qivjh0-MuiStepLabel-label.Mui-completed{
+    color:#05b2ab !important;
+}
+
+.css-qivjh0-MuiStepLabel-label{
+    font-family:"Circular" !important;
+    font-size: 15px !important;
+}
+
+.css-qivjh0-MuiStepLabel-label.MuiStepLabel-alternativeLabel{
+    margin-top:8px !important;
+}
+
+.css-f65ace-MuiStack-root {
+    margin-top: 8%;
+}
+
+
+
+.d{
+    transition:0.4s ease-out;
+    animation: 0.4s ease-out 0s opa;
+}
+    
+
+       
+        @keyframes opa {
+          0% {
+            opacity: 0;
+          }
+          100% {
+            opacity: 1;
+          }
+        }

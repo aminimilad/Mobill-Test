@@ -1,0 +1,204 @@
+/* #Form2{
+    animation: 0.4s ease-out 0s opa;
+    height:100%;
+    transition:0.4s ease-out;
+  }
+
+
+
+#Form2 .btn-box{
+  height:28vh;
+  align-content: space-evenly;
+  margin-top:2vh;
+}
+
+.headercontainer{
+ /*  height:311px;
+  display: grid;
+  align-items: center;
+  border-inline: solid 5px #e7e7e7; 
+}
+
+#Form2 .continue{
+/*   
+  color:black;
+  display: flex;
+  align-items: center;
+  align-content: space-between; 
+  background-color: #FFFFFF;
+
+}
+#Form2 .continue p{
+/*   
+  
+  font-size:18px;
+  text-align: left; 
+  font-variant: normal;
+  color:black;
+}
+
+.eller{
+  font-variant: small-caps;
+  font-size:20px;
+  display: flex;
+  flex-direction: row;
+}
+
+.eller:before, .eller:after{
+  content: "";
+  flex: 1 1;
+  border-bottom: 1px solid;
+  margin: auto;
+}
+.eller:before {
+  margin-right: 10px;
+}
+.eller:after {
+  margin-left: 10px;
+}
+
+#Form2 .text .alttxt{
+  color:gray;
+  font-size:14px;
+}
+
+
+
+.payex{
+  background-image:url("/src/images/payex.png");
+  background-size: 100% 100%;
+  height:50px;
+  width:67px;
+  margin:0 50px;
+
+}
+.swish{
+  background-image:url("/src/images/swish.png");
+  background-size: 100% 100%;
+  height:50px;
+  width:67px;
+  margin:0 50px;
+
+}
+
+.text{
+  display: grid;
+  
+}
+
+
+  @keyframes opa {
+    0% {
+      opacity: 0;
+    }
+    100% {
+      opacity: 1;
+    }
+  }
+
+ */
+ #Form2{
+  animation: 0.4s ease-out 0s opa;
+  height:100%;
+  transition:0.4s ease-out;
+}
+
+
+
+#Form2 .btn-box{
+  height: 28vh;
+  align-content: space-around;
+  /* margin-top: 2vh;*/
+}
+
+.headercontainer{
+  align-self: center;
+/*  height:311px;
+display: grid;
+
+border-inline: solid 5px #e7e7e7; */
+}
+
+#Form2 .continue{
+/*   
+color:black;
+display: flex;
+align-items: center;
+align-content: space-between; */
+
+background-color: #FFFFFF;
+/* padding: 0 20%; */
+width: 100%;
+/* padding: 38px;*/
+
+}
+#Form2 .continue p{
+/*   
+
+font-size:18px;
+text-align: left; */
+font-variant: normal;
+color:black;
+}
+
+.eller{
+font-variant: small-caps;
+font-size:20px;
+display: flex;
+flex-direction: row;
+}
+
+.eller:before, .eller:after{
+content: "";
+flex: 1 1;
+border-bottom: 1px solid;
+margin: auto;
+}
+.eller:before {
+margin-right: 10px;
+}
+.eller:after {
+margin-left: 10px;
+}
+
+#Form2 .text .alttxt{
+color:gray;
+font-size:14px;
+
+}
+
+
+
+.payex{
+background-image:url("/src/images/payex.png");
+background-size: 100% 100%;
+height:50px;
+width:67px;
+
+
+}
+.swish{
+background-image:url("/src/images/swish.png");
+background-size: 100% 100%;
+height:50px;
+width:67px;
+
+
+}
+
+.text{
+display: grid;
+justify-items: left;
+
+}
+
+
+@keyframes opa {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+

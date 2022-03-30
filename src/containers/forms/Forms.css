@@ -1,0 +1,19 @@
+.forms{
+    justify-content: center;
+    height: 100%;
+
+  
+     transition: ease-in 0.5s;
+     padding:0 10%;
+     font-family: 'circular';
+
+   }
+.form1c{
+    display: grid;
+    height: 100%;
+    align-items:center;
+
+}
+#Form1{
+      height: 100%;
+}
