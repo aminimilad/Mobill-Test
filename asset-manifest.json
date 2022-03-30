@@ -1,0 +1,20 @@
+{
+  "files": {
+    "main.css": "/static/css/main.da48cf7e.css",
+    "main.js": "/static/js/main.82c83193.js",
+    "static/js/787.c85afd0e.chunk.js": "/static/js/787.c85afd0e.chunk.js",
+    "static/media/payex.png": "/static/media/payex.631f65e3e434d13b8e07.png",
+    "static/media/CircularStd-Black.ttf": "/static/media/CircularStd-Black.5000f1578f504854c38a.ttf",
+    "static/media/swish.png": "/static/media/swish.248eb06e7482d7cb7020.png",
+    "static/media/mobill-logo.png": "/static/media/mobill-logo.ebc53b68d1d374542b08.png",
+    "static/media/EON.png": "/static/media/EON.bc841d1d9295328ce15c.png",
+    "index.html": "/index.html",
+    "main.da48cf7e.css.map": "/static/css/main.da48cf7e.css.map",
+    "main.82c83193.js.map": "/static/js/main.82c83193.js.map",
+    "787.c85afd0e.chunk.js.map": "/static/js/787.c85afd0e.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.da48cf7e.css",
+    "static/js/main.82c83193.js"
+  ]
+}
