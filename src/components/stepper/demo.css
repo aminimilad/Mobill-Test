@@ -75,11 +75,6 @@
                     font-size:16px;
             }  
         }
-        @media (max-width: 767px) { 
-            .css-qivjh0-MuiStepLabel-label.MuiStepLabel-alternativeLabel{
-                    font-size:16px;
-            }  
-        }
 
         @media (max-width: 530px) { 
             .css-m3195t, .css-kg4a96, .css-azrp4b{
