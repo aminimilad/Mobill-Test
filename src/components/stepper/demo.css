@@ -95,13 +95,10 @@
 
         @media (max-width: 530px) { 
             .css-m3195t, .css-kg4a96, .css-azrp4b{
-                width: 53px !important;
-                height:53px !important;
+                width: 58px !important;
+                height:58px !important;
             }
-            .css-i4bv87-MuiSvgIcon-root{
-                width: 0.8em !important;
-                height: 0.8em !important;
-            }
+           
             .css-qivjh0-MuiStepLabel-label.MuiStepLabel-alternativeLabel{
                 font-size: 12px;
             }
