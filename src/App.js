@@ -22,8 +22,9 @@ const App = () => {
   const [opacity3, opacitySet3] = React.useState(1);
   const [isQrActive, setQrState] = React.useState(false);
   const [chargeState, setChargeState] = React.useState(false);
-  const [text, setText] = React.useState(<p>Genom att trycka på börja ladda så godkänner du Mobills användarvillkor</p>);
+  const [text, setText] = React.useState(<p>börja ladda</p>);
   const show = (
+    
     <Zon>
       <QRscanButton onClick={QR} />
     </Zon>
@@ -79,7 +80,7 @@ const App = () => {
 
   function charge(){
     //TEXT initiate med timer - poll
-    setText(<p>kontrollerar anslutningen till laddplattform...</p>);
+    setText(<p>kontrollerar anslutningen...</p>);
 
     setTimeout(() => {
       beginCharge();
@@ -89,7 +90,7 @@ const App = () => {
   }
 
   function beginCharge(){
-    setText(<p>påbörjar laddningen...</p>);
+    setText(<p>förbereder...</p>);
     setChargeState(!chargeState);
     setTimeout(() => {
 
@@ -129,12 +130,16 @@ const App = () => {
         return (
           <Form1 activeStep={activeStep} opacity={opacity}>
             {isQrActive ? qrdiv : show}
+            <div class="btnholder">
             <div class="btn-box">{isQrActive ? one : two}</div>
+            </div>
+            
            </Form1>
         );
       case 1:
         return (
           <Form2 activeStep={activeStep} opacity2={opacity2}>
+            <div class="btnholder">
             <div class="btn-box">
               <ButtonContinue
                 onClick={() => {
@@ -142,10 +147,13 @@ const App = () => {
                 }}
               >
                 <div class="payex"></div>
+                <div class="textbox">
                 <div class="text">
-                  <p>Kortregistrering</p>
-                  <p class="alttxt">via Swedbank Pay</p>
+                  Kortregistrering
+                  <div class="alttxt">via Swedbank Pay</div>
                 </div>
+                </div>
+               
               </ButtonContinue>
 
               <div class="btn-text">
@@ -154,12 +162,18 @@ const App = () => {
 
               <ButtonContinue>
                 <div class="swish"></div>
+                <div class="textbox">
                 <div class="text">
-                  <p>Swish</p>
-                  <p class="alttxt">Betala med Swish</p>
+                  Swish
+                  <div class="alttxt">Betala med Swish</div>
                 </div>
+                </div>
+                
               </ButtonContinue>
             </div>
+
+            </div>
+            
           </Form2>
         );
 
@@ -168,15 +182,16 @@ const App = () => {
           <Form3 activeStep={activeStep} opacity3={opacity3}>
             <div class="btn-box">
               <div class="btn-text">
-               {text}
+              Genom att trycka på börja ladda så godkänner du Mobills användarvillkor
               </div>
-              <ButtonContinue
+              <ButtonContinue style={{color:'white'}}
                 onClick={() => {
                   charge();
                 }}
-              >
-                <p>börja ladda</p>
-                <CircularProgress color="success" style={{display: chargeState ? 'block' : 'none'}}/>
+              ><div class="btnf3">
+                {text}
+              </div>
+                <CircularProgress color="inherit" style={{display: chargeState ? 'block' : 'none', width: '25px', height:'25px', position: 'absolute', marginLeft: '55%'}}/>
               </ButtonContinue>
             </div>
           </Form3>
@@ -193,7 +208,7 @@ const App = () => {
                  fram();
                }}
              >
-              <p>Avsluta laddning</p>
+              <p>avsluta laddning</p>
             </StopCharging>
            </div>
          </Form4>

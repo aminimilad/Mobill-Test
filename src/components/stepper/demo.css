@@ -94,13 +94,9 @@
         }
 
         @media (max-width: 530px) { 
-            .css-m3195t, .css-kg4a96, .css-azrp4b{
-                width: 58px !important;
-                height:58px !important;
-            }
-           
+
             .css-qivjh0-MuiStepLabel-label.MuiStepLabel-alternativeLabel{
-                font-size: 12px;
+                font-size: 16px;
             }
             .css-lr0alj-MuiStepConnector-root.MuiStepConnector-alternativeLabel{
                 margin-top:50px !important;
@@ -114,10 +110,10 @@
             }
          }
 
-         @media (max-width: 360px) { 
-            
+
+         @media (min-width: 280px) and (max-width: 530px) and (min-height: 460px) and (max-height:680px){ 
             .d{
-                margin-top:35px;
+                margin-top:30px;
             }
             .css-lr0alj-MuiStepConnector-root.MuiStepConnector-alternativeLabel{
                 margin-top:45px !important;
@@ -125,5 +121,30 @@
             .css-12o5i44.MuiStepConnector-alternativeLabel{
                 margin-top:45px !important;
             }
-            
-         }
+            .css-m3195t, .css-kg4a96, .css-azrp4b{
+                width: 48px !important;
+                height:48px !important;
+            }
+            .css-qivjh0-MuiStepLabel-label.MuiStepLabel-alternativeLabel{
+                font-size:12px;
+            }  
+        }
+
+        @media (min-width: 280px) and (max-width: 530px) and (min-height: 460px) and (max-height:680px){ 
+            .d{
+                margin-top:30px;
+            }
+            .css-lr0alj-MuiStepConnector-root.MuiStepConnector-alternativeLabel{
+                margin-top:45px !important;
+            }
+            .css-12o5i44.MuiStepConnector-alternativeLabel{
+                margin-top:45px !important;
+            }
+            .css-m3195t, .css-kg4a96, .css-azrp4b{
+                width: 48px !important;
+                height:48px !important;
+            }
+            .css-qivjh0-MuiStepLabel-label.MuiStepLabel-alternativeLabel{
+                font-size:12px;
+            }  
+        }

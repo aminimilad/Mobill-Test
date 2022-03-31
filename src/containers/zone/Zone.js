@@ -6,7 +6,10 @@ import './Zone.css';
 
 export default function Zone(props) {
   return (
-    <div class="zon">
+  
+  <div class="zoncont">
+
+<div class="zon">
 
 <div id="Head" class="head">
   <div class="headrow">
@@ -37,5 +40,8 @@ export default function Zone(props) {
 
 
 </div>
+
+  </div>
+  
   )
 }
