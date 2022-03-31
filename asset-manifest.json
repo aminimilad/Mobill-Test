@@ -1,6 +1,6 @@
 {
   "files": {
-    "main.css": "/Mobill-Test/static/css/main.291f378b.css",
+    "main.css": "/Mobill-Test/static/css/main.5b86554c.css",
     "main.js": "/Mobill-Test/static/js/main.e817efb5.js",
     "static/js/787.c85afd0e.chunk.js": "/Mobill-Test/static/js/787.c85afd0e.chunk.js",
     "static/media/payex.png": "/Mobill-Test/static/media/payex.631f65e3e434d13b8e07.png",
@@ -9,12 +9,12 @@
     "static/media/mobill-logo.png": "/Mobill-Test/static/media/mobill-logo.ebc53b68d1d374542b08.png",
     "static/media/EON.png": "/Mobill-Test/static/media/EON.bc841d1d9295328ce15c.png",
     "index.html": "/Mobill-Test/index.html",
-    "main.291f378b.css.map": "/Mobill-Test/static/css/main.291f378b.css.map",
+    "main.5b86554c.css.map": "/Mobill-Test/static/css/main.5b86554c.css.map",
     "main.e817efb5.js.map": "/Mobill-Test/static/js/main.e817efb5.js.map",
     "787.c85afd0e.chunk.js.map": "/Mobill-Test/static/js/787.c85afd0e.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.291f378b.css",
+    "static/css/main.5b86554c.css",
     "static/js/main.e817efb5.js"
   ]
 }
