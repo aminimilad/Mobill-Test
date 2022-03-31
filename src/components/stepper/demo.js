@@ -13,23 +13,10 @@ import './demo.css'
 import StepConnector, { stepConnectorClasses } from '@mui/material/StepConnector';
 import Button from '@mui/material/Button';
 
-const CC = styled(StepConnector)(({ theme }) => ({
-    [`&.${stepConnectorClasses.alternativeLabel}`]: {
-       marginTop:'63px', display:'flex', left:'15%',right:'15%',zIndex:0,
-      },
-    [`& .${stepConnectorClasses.line}`]: {
-        height: 9,
-        border: 0,
-        backgroundColor:
-          theme.palette.mode === 'dark' ? theme.palette.grey[800] : '#000',
-        borderRadius: 1,width:'100%',
-      },
-      
-    }));
 
 const ColorlibConnector = styled(StepConnector)(({ theme }) => ({
   [`&.${stepConnectorClasses.alternativeLabel}`]: {
-    top: 26,
+    top: '28%',
   },
   [`&.${stepConnectorClasses.active}`]: {
     [`& .${stepConnectorClasses.line}`]: {
@@ -134,12 +121,8 @@ export default function CustomizedSteppers({activeStep, opacity}) {
         },
     }}>
         
-     
-         <Stepper alternativeLabel activeStep={activeStep} connector={<CC/>}>
-          
-        <CC/>
-        
-        </Stepper> 
+    
+
         <Stepper alternativeLabel activeStep={activeStep} connector={<ColorlibConnector/>}>
           
           {steps.map((label) => (

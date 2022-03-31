@@ -29,7 +29,7 @@ const App = () => {
     </Zon>
   );
   const qrdiv = <div class="qrread">
-    <QrReader style={{height:'100%', width:'100%'}} facingMode={'environment'}/></div>;
+    <QrReader style={{height:'100%', width:'100%'}} facingMode={'rear'}/></div>;
 
   const one = (
     <>
