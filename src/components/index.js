@@ -5,6 +5,5 @@ export {default as Form4} from './form4/Form4';
 export {default as Fd} from './stepper/demo';
 export { default as ButtonContinue } from './buttons/buttoncontinue';
 export { default as StopCharging } from './buttons/stopCharging';
-export { default as Swipe } from './swiper/Swiper';
 export {default as QRscanButton} from './buttons/qrscan';
 export {default as QRread} from './qrscanner/qrRead';

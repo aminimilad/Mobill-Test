@@ -10,13 +10,16 @@ import StopWatch from '../../timer';
 import "swiper/css";
 import "swiper/css/pagination";
 
-import "./styles.css";
 
 // import required modules
 import { Pagination, Navigation } from "swiper";
 export default function Form4({ opacity, ...props }) {
   return (
-    <div>  <Swiper
+    <div id="Form4">
+        <div class="form1c">   
+        <div class="zoncont">
+            
+        <Swiper
     loop={true}
     pagination={{
         clickable: true,
@@ -24,14 +27,14 @@ export default function Form4({ opacity, ...props }) {
     navigation={false}
     modules={[Navigation, Pagination]}
     className="mySwiper"
+    style={{backgroundColor:'#d7d7d7', boxShadow:'0 10px 20px rgb(0 0 0 / 19%), 0 6px 6px rgb(0 0 0 / 23%)', borderRadius:'10px', width:'100%'}}
 >
-    <SwiperSlide>
-        <div id="Form4">
-            <div class="form1c">
+    <SwiperSlide >
+        
                 <div id="Zon" class="zon">
                     <div id="Head" class="head">
                         <div class="headrow">
-                            <div class="h1-custom">Påbörjad laddning</div>
+                            <div class="h1-custom">Pågående laddning</div>
                         </div>
 
                         <p class="ss">burlöv medborgarhuset</p>
@@ -59,13 +62,16 @@ export default function Form4({ opacity, ...props }) {
 
 
 
-            </div>
-        </div>
+         
 
     </SwiperSlide>
-    <SwiperSlide>   <StopWatch /> </SwiperSlide>
+    <SwiperSlide>   <StopWatch/></SwiperSlide>
 
-</Swiper> {props.children}</div>
+</Swiper>
+
+            </div> {props.children}</div>
+  
+</div>
     
     
   );

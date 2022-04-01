@@ -6,36 +6,42 @@ import './Zone.css';
 
 export default function Zone(props) {
   return (
-    <div class="zon">
+  
+  <div class="zoncont">
 
-      <div id="Head" class="head">
-        <div class="headrow">
-          <div class="status"><CheckCircleIcon /><p>Tillgänglig</p></div>
-          {props.children}
-        </div>
+<div class="zon">
 
-        <p class="ss">burlöv medborgarhuset</p>
-      </div>
+<div id="Head" class="head">
+  <div class="headrow">
+    <div class="status"><CheckCircleIcon/><p>Tillgänglig</p></div>
+    {props.children}
+  </div>
+  
+  <p class="ss">burlöv medborgarhuset</p> 
+</div>
 
-      <div class="spec">
-        <div class="zonid">
-          <span>zon id</span>
-          <span class="a">101</span>
-        </div>
-        <div class="uttagid">
-          <span>uttag</span>
-          <span class="a">111</span>
-        </div>
-        <div class="pris">
-          <span>PRIS/kWh</span>
-          <span class="a">3kr</span>
-        </div>
+<div class="spec">
+  <div class="zonid">
+    <span>zon id</span>
+    <span class="a">101</span>
+  </div>
+  <div class="uttagid">
+    <span>uttag</span>
+    <span class="a">111</span>
+  </div>
+  <div class="pris">
+    <span>PRIS/kWh</span>
+    <span class="a">3kr</span>
+  </div>
+  
+</div>
+<div class="providerContainer"><div class="provider"></div></div>
 
-      </div>
-      <div class="providerContainer"><div class="provider"></div></div>
 
 
+</div>
 
-    </div>
+  </div>
+  
   )
 }

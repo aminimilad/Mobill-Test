@@ -11,9 +11,18 @@
 .form1c{
     display: grid;
     height: 100%;
-    align-content:space-evenly;
+    align-items: baseline;
 
 }
 #Form1{
       height: 100%;
+}
+
+@media (max-width:660px) {
+    .forms{
+      
+         padding:0 5%;
+
+    
+       }
 }

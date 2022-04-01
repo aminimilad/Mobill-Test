@@ -5,11 +5,11 @@ import '../../containers/forms/Forms.css'
 export default function Form3({opacity3,...props}) {
   return (
 
-    <forms>
+    
       <div id="Form3" style={{opacity:opacity3}}>
           <div class="form1c">
 
-        
+          <div class="zoncont">
           <div id="Zon" class="zon">
             <div id="Head" class="head">
               <div class="headrow">
@@ -37,9 +37,11 @@ export default function Form3({opacity3,...props}) {
               <div class="provider"></div>
             </div>
           </div>
+          </div>
+          
           {props.children}
         </div>
       </div>
-    </forms>
+
   )
 }

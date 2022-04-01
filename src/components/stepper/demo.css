@@ -10,24 +10,26 @@
     color:#05b2ab !important;
 }
 
-.css-qivjh0-MuiStepLabel-label{
-    font-family:"Circular" !important;
-    font-size: 15px !important;
+.line{ margin-top:3.6%;
+     left:15%;
+     right:15%;
+     
+      display: block;
+    height: 9px;
+        position: absolute;
+        background-color:black;
+         
 }
 
-.css-qivjh0-MuiStepLabel-label.MuiStepLabel-alternativeLabel{
-    margin-top:8px !important;
-}
 
-.css-f65ace-MuiStack-root {
-    margin-top: 8%;
-}
 
 
 
 .d{
     transition:0.4s ease-out;
     animation: 0.4s ease-out 0s opa;
+    margin-top: 50px;
+    
 }
     
 
@@ -39,4 +41,106 @@
           100% {
             opacity: 1;
           }
+        }
+
+        @media (min-width: 768px) and (max-width: 979px) and (min-height:980px) { 
+
+            .d{
+                margin-top:80px;
+            }
+            .css-qivjh0-MuiStepLabel-label.MuiStepLabel-alternativeLabel{
+                    font-size:20px;
+            }
+            .css-m3195t, .css-kg4a96, .css-azrp4b{
+                width:65px !important;
+                height:65px !important;
+            }
+            .css-lr0alj-MuiStepConnector-root.MuiStepConnector-alternativeLabel{
+                margin-top:97px !important;
+            }
+            .css-12o5i44.MuiStepConnector-alternativeLabel{
+                margin-top:97px !important;
+            }
+            
+        }
+        @media (max-width: 767px) and (min-height: 980px) { 
+                
+            .d{
+                margin-top:80px;
+            }
+            .css-qivjh0-MuiStepLabel-label.MuiStepLabel-alternativeLabel{
+                    font-size:16px;
+            }  
+            .css-m3195t, .css-kg4a96, .css-azrp4b{
+                width: 75px !important;
+                height:75px !important;
+            }
+            .css-lr0alj-MuiStepConnector-root.MuiStepConnector-alternativeLabel{
+                margin-top:102px !important;
+            }
+            .css-12o5i44.MuiStepConnector-alternativeLabel{
+                margin-top:102px !important;
+            }
+            
+        }
+        @media (max-width: 767px) and (min-height: 980px) { 
+            .css-qivjh0-MuiStepLabel-label.MuiStepLabel-alternativeLabel{
+                    font-size:16px;
+            }  
+        }
+
+        @media (max-width: 530px) { 
+
+            .css-qivjh0-MuiStepLabel-label.MuiStepLabel-alternativeLabel{
+                font-size: 16px;
+            }
+            .css-lr0alj-MuiStepConnector-root.MuiStepConnector-alternativeLabel{
+                margin-top:50px !important;
+            }
+            .css-12o5i44.MuiStepConnector-alternativeLabel{
+                margin-top:50px !important;
+            }
+            
+            .d{
+                margin-top:40px;
+            }
+         }
+
+
+         @media (min-width: 280px) and (max-width: 530px) and (min-height: 460px) and (max-height:680px){ 
+            .d{
+                margin-top:30px;
+            }
+            .css-lr0alj-MuiStepConnector-root.MuiStepConnector-alternativeLabel{
+                margin-top:45px !important;
+            }
+            .css-12o5i44.MuiStepConnector-alternativeLabel{
+                margin-top:45px !important;
+            }
+            .css-m3195t, .css-kg4a96, .css-azrp4b{
+                width: 48px !important;
+                height:48px !important;
+            }
+            .css-qivjh0-MuiStepLabel-label.MuiStepLabel-alternativeLabel{
+                font-size:12px;
+            }  
+        }
+
+        @media (min-width: 280px) and (max-width: 530px) and (min-height: 460px) and (max-height:680px){ 
+            .d{
+                margin-top:30px;
+            }
+            .css-lr0alj-MuiStepConnector-root.MuiStepConnector-alternativeLabel{
+                margin-top:45px !important;
+            }
+            .css-12o5i44.MuiStepConnector-alternativeLabel{
+                margin-top:45px !important;
+            }
+            .css-m3195t, .css-kg4a96, .css-azrp4b{
+                width: 48px !important;
+                height:48px !important;
+            }
+            .css-qivjh0-MuiStepLabel-label.MuiStepLabel-alternativeLabel{
+                font-size:12px;
+            }  
         }

@@ -6,14 +6,14 @@
     background-color:#118581;
     box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.1), 0px 8px 15px rgba(0, 0, 0, 0.2);
     transition: all 0.3s ease 0s;
+    align-items: center;
     display: flex;
   }
   .continue:hover {
     background-color: #05b2ab;
     box-shadow: 0px 15px 20px rgba(8, 220, 235, 0.2);
-    color: #fff;
-  }
 
+  }
   .continue p{
     font-family: circular;
     font-variant: small-caps;
@@ -21,3 +21,17 @@
     margin-bottom:2px;
     color:#e7e7e7;
   }
+
+        
+  @media (min-width: 280px) and (max-width: 530px) and (min-height: 479px) and (max-height:668px){ 
+    
+
+    .continue p{
+
+      font-size: 6vw;
+
+    }
+  
+      
+  }
+

@@ -13,23 +13,10 @@ import './demo.css'
 import StepConnector, { stepConnectorClasses } from '@mui/material/StepConnector';
 import Button from '@mui/material/Button';
 
-const CC = styled(StepConnector)(({ theme }) => ({
-    [`&.${stepConnectorClasses.alternativeLabel}`]: {
-        display:'flex', left:'15%',right:'15%',zIndex:0,
-      },
-    [`& .${stepConnectorClasses.line}`]: {
-        height: 9,
-        border: 0,
-        backgroundColor:
-          theme.palette.mode === 'dark' ? theme.palette.grey[800] : '#000',
-        borderRadius: 1,width:'100%',
-      },
-      
-    }));
 
 const ColorlibConnector = styled(StepConnector)(({ theme }) => ({
   [`&.${stepConnectorClasses.alternativeLabel}`]: {
-    top: 26,
+    top: '28%',
   },
   [`&.${stepConnectorClasses.active}`]: {
     [`& .${stepConnectorClasses.line}`]: {
@@ -113,22 +100,29 @@ ColorlibStepIcon.propTypes = {
 
   const steps = ['Zoninfo', 'Betalsätt', 'Börja ladda'];
 
-export default function CustomizedSteppers({activeStep, opacity}) {
+export default function CustomizedSteppers({activeStep, opacity, showStep}) {
 
 
      
 
   return (
-      <div class="d" style={{opacity:opacity}}>
+      <div class="d" style={{opacity:opacity, display: showStep? 'block' : 'none'}}>
 
-      <Stack sx={{ width: '100%', color:'red'}}>
+      <Stack sx={{ width: '100%',
+    '& .css-qivjh0-MuiStepLabel-label':{
+      fontFamily:'Circular'},
+      '& .css-qivjh0-MuiStepLabel-label.MuiStepLabel-alternativeLabel':{
+        marginTop:'8px',
+      },
+      '& .css-farnub-MuiStepLabel-label':{
+        fontFamily:'Circular'},
+        '& .css-farnubs-MuiStepLabel-label.MuiStepLabel-alternativeLabel':{
+          marginTop:'8px',
+        },
+    }}>
         
-     
-        {/* <Stepper alternativeLabel activeStep={activeStep} connector={<CC/>}>
-          
-        <CC/>
-        
-        </Stepper> */}
+    
+
         <Stepper alternativeLabel activeStep={activeStep} connector={<ColorlibConnector/>}>
           
           {steps.map((label) => (

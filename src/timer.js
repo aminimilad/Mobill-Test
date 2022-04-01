@@ -38,9 +38,27 @@ function StopWatch() {
 
 
     return (
-        <div className="stop-watch">
+
+    
+        <div id="Head" class="headf4">
+            <div class="headrow">
+                <div class="h1-custom">Pågående laddning</div>
+            </div>
             <Timer time={time} />
+   
         </div>
+        
+        
+            
+        
+
+
+
+
+
+
+
+        
     );
 }
 
