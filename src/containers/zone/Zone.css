@@ -87,7 +87,6 @@ height: 20px;
 background-image: url("/src/images/EON.png");
 float: right;
 background-size: 100% 100%;
-
 }
 
 
@@ -115,8 +114,8 @@ background-size: 100% 100%;
     }
 
     .provider{
-        width:95px;
-        height:27px;
+        width:84px;
+        height:24px;
     }
 }
 
@@ -141,8 +140,8 @@ background-size: 100% 100%;
     }
 
     .provider{
-        width:52px;
-        height:15px;
+        width:69px;
+        height:20px;
     }
     .spec{
         padding:3% 0;
