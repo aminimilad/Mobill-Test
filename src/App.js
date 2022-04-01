@@ -7,12 +7,13 @@ import { Forms } from "./containers";
 import CustomizedSteppers from "./components/stepper/demo";
 import { ButtonContinue } from "./components";
 import { StopCharging } from "./components";
-import { QrReader } from "react-qr-reader";
+import { QrReader } from "modern-react-qr-reader";
 import { QRscanButton } from "./components";
 import { Zon } from "./containers";
 import "./components/buttons/buttoncontinue.css";
 import Form5 from "./components/form5/Form5";
 import CircularProgress from '@mui/material/CircularProgress';
+import Test from "./Test";
 
 const App = () => {
   const [activeStep, setActiveStep] = React.useState(0);
@@ -22,6 +23,7 @@ const App = () => {
   const [opacity3, opacitySet3] = React.useState(1);
   const [isQrActive, setQrState] = React.useState(false);
   const [chargeState, setChargeState] = React.useState(false);
+  const [showStep, setDisplayStep] = React.useState(true);
   const [text, setText] = React.useState(<p>börja ladda</p>);
   const show = (
     
@@ -30,11 +32,11 @@ const App = () => {
     </Zon>
   );
   const qrdiv = <div class="qrread">
-    <QrReader style={{height:'100%', width:'100%'}} facingMode={'rear'}/></div>;
+    <Test/></div>;
 
   const one = (
     <>
-      <div class="btn-text">... (:</div>
+      <div class="btn-text">Håll kameran mot QR-Koden</div>
       <ButtonContinue
         onClick={() => {
           QR();
@@ -71,7 +73,7 @@ const App = () => {
     setTimeout(() => {
 
       opacitySet(1);
-
+      setDisplayStep(!showStep);
       setQrState(!isQrActive);
     }, 400);
 
@@ -229,7 +231,7 @@ const App = () => {
     <>
       <Header />
       <Section class="section">
-        <CustomizedSteppers activeStep={activeStep} opacity={!isQrActive ? opacity3 : 0} />
+        <CustomizedSteppers activeStep={activeStep} opacity={!isQrActive ? opacity3 : 0} showStep={showStep} />
         <Forms>{getStepContent(activeStep)}</Forms>
       </Section>
     </>

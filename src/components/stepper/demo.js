@@ -100,13 +100,13 @@ ColorlibStepIcon.propTypes = {
 
   const steps = ['Zoninfo', 'Betalsätt', 'Börja ladda'];
 
-export default function CustomizedSteppers({activeStep, opacity}) {
+export default function CustomizedSteppers({activeStep, opacity, showStep}) {
 
 
      
 
   return (
-      <div class="d" style={{opacity:opacity}}>
+      <div class="d" style={{opacity:opacity, display: showStep? 'block' : 'none'}}>
 
       <Stack sx={{ width: '100%',
     '& .css-qivjh0-MuiStepLabel-label':{

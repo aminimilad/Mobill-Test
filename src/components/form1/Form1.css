@@ -66,8 +66,7 @@ section{
   padding:0;
 }
   section div{
-    padding-top:0 !important;
-    height:100%;
+   display: none;
   }
 
           
