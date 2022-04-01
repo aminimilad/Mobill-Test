@@ -1,0 +1,8 @@
+
+Eon loggan större
+Knapparna för kortreg, lika stora som alla andra
+Trycker på börja ladda -> ingen delay, texten ovan ändras och knappen börjar snurra 
+Ändra ordningen på pågående laddning -> timern först
+Titeln på timern större och samma postion som den andra
+Tiden större
+Pop up när avlusta laddning
