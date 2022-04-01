@@ -23,7 +23,7 @@
     margin: 5% 0 0 0;
   }
 .timer{
-    margin: -3% 0 33% 0;
+    margin: -3% 0 22% 0;
 }
 
   @media (min-width: 768px) and (max-width: 979px) and (min-height:900px) { 
@@ -37,7 +37,7 @@
         height:100%;
     }
     .timer{
-        margin: -3% 0 44% 0;
+        margin: -7% 0 37% 0;
     }
   
 }
