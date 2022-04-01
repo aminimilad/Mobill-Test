@@ -25,7 +25,7 @@ const App = () => {
   const [opacity3, opacitySet3] = React.useState(1);
   const [isQrActive, setQrState] = React.useState(false);
   const [chargeState, setChargeState] = React.useState(false);
-  const [showStep, setDisplayStep] = React.useState(true);
+  const [showStep, setDisplayStep] = React.useState(false);
   const [text, setText] = React.useState(<p>börja ladda</p>);
   const show = (
     
@@ -67,7 +67,9 @@ const App = () => {
     </>
   );
 
-  
+  function stopDisplay(){
+    setDisplayStep(!showStep);
+  }
 
   function QR() {  //metoden opacityset o setQrstate körs efter 400ms - osv
 
@@ -130,7 +132,7 @@ const App = () => {
   function getStepContent(step) {
     //PRELIMINÄR - stor del av koden kmr att inkapslas -----------------------------------------------------------
     switch (step) {
-      case 0:
+      case 1:
         return (
           <Form1 activeStep={activeStep} opacity={opacity}>
             {isQrActive ? qrdiv : show}
@@ -210,6 +212,7 @@ const App = () => {
                <StopCharging
                onClick={() => {
                  fram();
+                 stopDisplay();
                }}
              >
               <p>avsluta laddning</p>
@@ -217,7 +220,7 @@ const App = () => {
            </div>
          </Form4>
         );
-      case 4: 
+      case 0: 
                return(
                 <Form5>
 

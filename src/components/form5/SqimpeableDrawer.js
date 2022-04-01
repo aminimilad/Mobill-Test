@@ -62,9 +62,9 @@ function SwipeableEdgeDrawer(props) {
             />
 
             {/* TODO REMOVE */}
-            <Box sx={{ textAlign: 'center', pt: 1 }}>
+            {/* <Box sx={{ textAlign: 'center', pt: 1 }}>
                 <Button onClick={toggleDrawer(true)}>Open</Button>
-            </Box>
+            </Box>  */}
 
             <SwipeableDrawer
                 container={container}
@@ -90,8 +90,11 @@ function SwipeableEdgeDrawer(props) {
 
                     }}
                 >
-                    <Puller />
-                    <Typography sx={{ p: 5, color: 'black', fontFamily: 'circular', textAlign: 'center', fontSize: '30px' }}>Tack för att du valde Mobill!</Typography>
+                    <Puller />t
+                    <div class="thanksc">
+                        <Typography sx={{ p: 5, color: 'black', fontFamily: 'circular', textAlign: 'center', fontSize: '30px' }}>Tack för att du valde Mobill!</Typography>
+                    </div>
+                    
 
 
 

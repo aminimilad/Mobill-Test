@@ -5,7 +5,7 @@ import DownloadFile from './downloadFile';
 
 export default function Form5(props) {
     return (
-
+<div class="form1c"> 
 
         <div className='title'>
             Laddning avslutad!
@@ -37,11 +37,12 @@ export default function Form5(props) {
 
             </div>
 
-            <SwipeableEdgeDrawer>
+            
+        </div >
+        <SwipeableEdgeDrawer>
 
             </SwipeableEdgeDrawer>
-        </div >
-
+</div>
 
 
 
