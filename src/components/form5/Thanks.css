@@ -1,0 +1,43 @@
+.mobill-logo{
+    text-align: center;
+    margin-top: 10%;
+}
+
+.title-one {
+    font-family: 'circular';
+    text-align: center;
+    margin-top: 5%;
+}
+
+
+.title-two {
+     font-family: 'circular';
+    font-size: 30px;
+    text-align: center;
+     margin-left: 5%;
+    margin-right: 5%;
+    margin-top: 1%;
+}
+
+.title-three {
+     font-family: 'circular';
+    text-align: center;
+     margin-left: 5%;
+    margin-right: 5%;
+    margin-top: 1%;
+}
+
+.buttons-container {
+    box-sizing: border-box;
+}
+
+.buttons-container .app-store-btn, .google-play-btn {
+  display: inline-block;
+  margin-top: 10%;
+  width: 50%;
+  text-align: center;
+}
+
+
+
+

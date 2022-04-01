@@ -1,24 +1,49 @@
-#Form5{
-    animation: 0.4s ease-out 0s opq;
-    height:100%;
-  }
-#Form5 .head .ss{
+.title {
+  font-family: 'circular';
+  font-size: 35px;
   text-align: center;
-  margin-left:0;
 }
 
-#Form5 .btn-box .continue {
+.kvitto {
+  background-image: url("../../images/receipt.png");
+  width: 350px;
+  margin-top: -5%;
+  height: 338px;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  box-shadow: rgba(0, 0, 0, 0.56) 0px 10px 80px 5px;
+}
+
+.title-kvitto {
+  font-family: 'circular';
+  font-size: 30px;
+  text-align: center;
+  padding-top: 10px;
+}
+
+.asterik {
+   font-family: 'circular';
+  font-size: 20px;
+  text-align: center;
+  padding-top: 5px;
+}
+
+.zon-info, .date, .time, .price, .download{
+ font-family: 'circular';
+  font-size: 15px;
+  text-align: center;
+  padding-top: 5px;
+  padding-bottom: 5px;
+  text-align: left;
+  padding-left: 10px;
+  margin-left: 2%;
+}
+
+.download {
+   display: flex;
   align-items: center;
-  margin-top: 20px;
+  width: 54%;
 }
-.headrow{
-  justify-content: center;
-}
-  @keyframes opq {
-    0% {
-      opacity: 0;
-    }
-    100% {
-      opacity: 1;
-    }
-  }
+

@@ -13,25 +13,26 @@ import { Drawer } from '@mui/material';
 import { MenuItem } from '@mui/material';
 import Form3 from '../form3/Form3';
 import Zone from '../../containers/zone/Zone'
-
+import Thanks from './Thanks';
+import './theme.css'
 
 const drawerBleeding = 90;
 
 const Root = styled('div')(({ theme }) => ({
-    height: '100%',
+    height: '10%',
     backgroundColor:
-        theme.palette.mode === 'light' ? grey[100] : theme.palette.background.default,
+        theme.palette.mode === 'light' ? grey[200] : theme.palette.background.default,
 }));
 
 const StyledBox = styled(Box)(({ theme }) => ({
-    backgroundColor: theme.palette.mode === 'light' ? '#fff' : grey[800], //test
+    backgroundColor: theme.palette.mode === 'light' ? 'white' : grey[800], //test
 }));
 
 const Puller = styled(Box)(({ theme }) => ({
     width: 50,
     height: 6,
     backgroundColor: theme.palette.mode === 'light' ? grey[300] : grey[900],
-    borderRadius: 3,
+    borderRadius: 5,
     position: 'absolute',
     top: 8,
     left: 'calc(50% - 25px)',
@@ -90,11 +91,14 @@ function SwipeableEdgeDrawer(props) {
                     }}
                 >
                     <Puller />
-                    <Typography sx={{ p: 5, color: 'black', fontFamily: 'circular', textAlign: 'center', fontSize: '25px' }}>Tack för att du valde Mobill!</Typography>
+                    <Typography sx={{ p: 5, color: 'black', fontFamily: 'circular', textAlign: 'center', fontSize: '30px' }}>Tack för att du valde Mobill!</Typography>
 
-                    <Form3>
 
-                    </Form3>
+
+                    <Thanks>
+
+                    </Thanks>
+
                 </StyledBox>
             </SwipeableDrawer>
         </Root>

@@ -1,43 +1,49 @@
 import React from 'react'
 import './Form5.css';
 import SwipeableEdgeDrawer from './SqimpeableDrawer';
+import DownloadFile from './downloadFile';
 
 export default function Form5(props) {
     return (
-        <div id="Form5">
-            <div class="form1c">
-                <div id="Zon" class="zon">
-                    <div id="Head" class="head">
-                        <div class="headrow">
-                            <div class="h1-custom">Bekräftelse</div>
-                        </div>
 
-                        <p class="ss">burlöv medborgarhuset</p>
-                    </div>
-                    <div class="spec">
-                        <div class="zonid">
-                            <span>zon id</span>
-                            <span class="a">101</span>
-                        </div>
-                        <div class="uttagid">
-                            <span>uttag</span>
-                            <span class="a">111</span>
-                        </div>
-                        <div class="pris">
-                            <span>PRIS/kWh</span>
-                            <span class="a">3kr</span>
-                        </div>
 
-                    </div>
-                    <div class="providerContainer">
-                        <div class="provider"></div>
-                    </div>
-                    <SwipeableEdgeDrawer>
-
-                    </SwipeableEdgeDrawer>
+        <div className='title'>
+            Laddning avslutad!
+            <div className='kvitto'>
+                <div className='title-kvitto'>
+                    Kvitto
                 </div>
-                {props.children}
+                <div className='asterik'>
+                    **********************************
+                    <div className='zon-info'>
+                        101 - Burlöv Medborgarhuset
+                    </div>
+                    <div className='date'>
+                        18 jan. 2022
+                    </div>
+                    <div class="time">
+                        14:00 - 14:11 / 0h 11m
+                    </div>
+                    **********************************
+                    <div class="price">
+                        Belopp: 5kr (varav moms 1kr)
+                    </div>
+                    <div className='download' onClick={DownloadFile}>
+                        <img src={require('../../images/downloadAsPDFPicture.webp')} width={60} height={60}  />
+                        Ladda ner kvitto
+                    </div>
+
+                </div>
+
             </div>
-        </div>
+
+            <SwipeableEdgeDrawer>
+
+            </SwipeableEdgeDrawer>
+        </div >
+
+
+
+
     )
 }

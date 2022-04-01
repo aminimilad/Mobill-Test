@@ -11,6 +11,9 @@
     "@testing-library/jest-dom": "^5.16.2",
     "@testing-library/react": "^12.1.4",
     "@testing-library/user-event": "^13.5.0",
+    "file-saver": "^2.0.5",
+    "html5-qrcode": "^2.2.0",
+    "modern-react-qr-reader": "^1.0.12",
     "rea": "0.0.1",
     "react": "^17.0.2",
     "react-dom": "^17.0.2",
@@ -19,6 +22,7 @@
     "react-qr-scanner": "^1.0.0-alpha.8",
     "react-scripts": "5.0.0",
     "react-transitions": "^1.0.0",
+    "reactive-qr": "^0.1.8",
     "swiper": "^8.0.7",
     "web-vitals": "^2.1.4"
   },

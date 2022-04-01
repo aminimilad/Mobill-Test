@@ -14,6 +14,7 @@ import "./components/buttons/buttoncontinue.css";
 import Form5 from "./components/form5/Form5";
 import CircularProgress from '@mui/material/CircularProgress';
 
+
 const App = () => {
   const [activeStep, setActiveStep] = React.useState(0);
 
@@ -28,10 +29,11 @@ const App = () => {
       <QRscanButton onClick={QR} />
     </Zon>
   );
+
   const qrdiv = <div class="qrread"><QrReader /></div>;
 
-  
-  
+
+
 
 
 
@@ -77,18 +79,18 @@ const App = () => {
 
   }
 
-  function charge(){
+  function charge() {
     //TEXT initiate med timer - poll
     setText(<p>kontrollerar anslutningen till laddplattform...</p>);
 
     setTimeout(() => {
       beginCharge();
-      
+
     }, 5000);
-    
+
   }
 
-  function beginCharge(){
+  function beginCharge() {
     setText(<p>påbörjar laddningen...</p>);
     setChargeState(!chargeState);
     setTimeout(() => {
@@ -119,7 +121,7 @@ const App = () => {
 
     setTimeout(() => {
       setActiveStep(activeStep + 1);
-    },400);
+    }, 400);
   }
 
   function getStepContent(step) {
@@ -127,10 +129,14 @@ const App = () => {
     switch (step) {
       case 0:
         return (
-          <Form1 activeStep={activeStep} opacity={opacity}>
-            {isQrActive ? qrdiv : show}
-            <div class="btn-box">{isQrActive ? one : two}</div>
-           </Form1>
+          // <Form1 activeStep={activeStep} opacity={opacity}>
+          //   {isQrActive ? qrdiv : show}
+          //   <div class="btn-box">{isQrActive ? one : two}</div>
+          // </Form1>
+          <Form5>
+
+          </Form5>
+
         );
       case 1:
         return (
@@ -168,7 +174,7 @@ const App = () => {
           <Form3 activeStep={activeStep} opacity3={opacity3}>
             <div class="btn-box">
               <div class="btn-text">
-               {text}
+                {text}
               </div>
               <ButtonContinue
                 onClick={() => {
@@ -176,34 +182,34 @@ const App = () => {
                 }}
               >
                 <p>börja ladda</p>
-                <CircularProgress color="success" style={{display: chargeState ? 'block' : 'none'}}/>
+                <CircularProgress color="success" style={{ display: chargeState ? 'block' : 'none' }} />
               </ButtonContinue>
             </div>
           </Form3>
         );
       case 3:
         return (
-           <Form4>
-             <div class="btn-box">
-               <div class="btn-text">
-                 Tryck för att avsluta sessionen
-             </div>
-               <StopCharging
-               onClick={() => {
-                 fram();
-               }}
-             >
-              <p>Avsluta laddning</p>
-            </StopCharging>
-           </div>
-         </Form4>
+          <Form4>
+            <div class="btn-box">
+              <div class="btn-text">
+                Tryck för att avsluta sessionen
+              </div>
+              <StopCharging
+                onClick={() => {
+                  fram();
+                }}
+              >
+                <p>Avsluta laddning</p>
+              </StopCharging>
+            </div>
+          </Form4>
         );
-      case 4: 
-               return(
-                <Form5>
+      case 4:
+        return (
+          <Form5>
 
-                </Form5>
-               );
+          </Form5>
+        );
       default:
         throw new Error("Mis-step!");
     }
