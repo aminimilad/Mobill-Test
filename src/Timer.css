@@ -10,15 +10,18 @@
   
 .digits{
     font-family: circular;
-    font-size: 2rem;
+    font-size: 3rem;
     color:  black;
 }
 
 .headf4{
     display: grid;
-    margin: 3% 0 0 0;
+    margin: 9.4% 0 0 0;
     height:100%;
 }
+.timer .head{
+    margin: 5% 0 0 0;
+  }
 .timer{
     margin: -3% 0 33% 0;
 }
@@ -30,7 +33,7 @@
 @media (min-width: 280px) and (max-width: 530px) and (min-height: 480px) and (max-height:916px){ 
     .headf4{
         display: grid;
-        margin: 5% 0 0 0;
+        margin: 9.4% 0 0 0;
         height:100%;
     }
     .timer{

@@ -5,16 +5,30 @@
 }
 
 .kvitto {
-  background-image: url("../../images/receipt.png");
-  width: 350px;
-  margin-top: -5%;
-  height: 338px;
-  position: absolute;
-  left: 50%;
-  top: 50%;
-  transform: translate(-50%, -50%);
+  background-image: url("../../images/receiptbackground.png");
+
+
+  height: 337px;
+
+
+ 
+
+
+}
+
+.kvittocontainer {
+  width: 100%;
+  height: 70%;
+
+
+
+
+
+
+
   box-shadow: rgba(0, 0, 0, 0.56) 0px 10px 80px 5px;
 }
+
 
 .title-kvitto {
   font-family: 'circular';

@@ -29,6 +29,8 @@ export default function Form4({ opacity, ...props }) {
     className="mySwiper"
     style={{backgroundColor:'#d7d7d7', boxShadow:'0 10px 20px rgb(0 0 0 / 19%), 0 6px 6px rgb(0 0 0 / 23%)', borderRadius:'10px', width:'100%'}}
 >
+    
+    <SwiperSlide>   <StopWatch/></SwiperSlide>
     <SwiperSlide >
         
                 <div id="Zon" class="zon">
@@ -65,8 +67,6 @@ export default function Form4({ opacity, ...props }) {
          
 
     </SwiperSlide>
-    <SwiperSlide>   <StopWatch/></SwiperSlide>
-
 </Swiper>
 
             </div> {props.children}</div>

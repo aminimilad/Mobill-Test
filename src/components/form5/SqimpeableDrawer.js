@@ -90,7 +90,7 @@ function SwipeableEdgeDrawer(props) {
 
                     }}
                 >
-                    <Puller />t
+                    <Puller />
                     <div class="thanksc">
                         <Typography sx={{ p: 5, color: 'black', fontFamily: 'circular', textAlign: 'center', fontSize: '30px' }}>Tack för att du valde Mobill!</Typography>
                     </div>

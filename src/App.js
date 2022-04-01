@@ -25,8 +25,9 @@ const App = () => {
   const [opacity3, opacitySet3] = React.useState(1);
   const [isQrActive, setQrState] = React.useState(false);
   const [chargeState, setChargeState] = React.useState(false);
-  const [showStep, setDisplayStep] = React.useState(false);
+  const [showStep, setDisplayStep] = React.useState(true);
   const [text, setText] = React.useState(<p>börja ladda</p>);
+  const [boxText, setBoxText] = React.useState(<p>Genom att trycka på börja ladda så godkänner du Mobills användarvillkor</p>);
   const show = (
     
     <Zon>
@@ -84,24 +85,16 @@ const App = () => {
 
   }
 
-  function charge(){
-    //TEXT initiate med timer - poll
-    setText(<p>kontrollerar anslutningen...</p>);
-
-    setTimeout(() => {
-      beginCharge();
-      
-    }, 5000);
-    
-  }
+  
 
   function beginCharge(){
-    setText(<p>förbereder...</p>);
+    setBoxText(<p>Vi väntar på att laddningen ska börja. Se till att laddningskabeln är inkopplad</p>)
+    setText(<p>försöker ansluta</p>);
     setChargeState(!chargeState);
     setTimeout(() => {
 
       fram3();
-    }, 3000);
+    }, 1000);
   }
 
   function fram() {
@@ -132,7 +125,7 @@ const App = () => {
   function getStepContent(step) {
     //PRELIMINÄR - stor del av koden kmr att inkapslas -----------------------------------------------------------
     switch (step) {
-      case 1:
+      case 0:
         return (
           <Form1 activeStep={activeStep} opacity={opacity}>
             {isQrActive ? qrdiv : show}
@@ -188,11 +181,11 @@ const App = () => {
           <Form3 activeStep={activeStep} opacity3={opacity3}>
             <div class="btn-box">
               <div class="btn-text">
-              Genom att trycka på börja ladda så godkänner du Mobills användarvillkor
+              {boxText}
               </div>
               <ButtonContinue style={{color:'white'}}
                 onClick={() => {
-                  charge();
+                  beginCharge();
                 }}
               ><div class="btnf3">
                 {text}
@@ -220,7 +213,7 @@ const App = () => {
            </div>
          </Form4>
         );
-      case 0: 
+      case 4: 
                return(
                 <Form5>
 
