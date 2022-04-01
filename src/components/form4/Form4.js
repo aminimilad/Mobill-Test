@@ -18,7 +18,7 @@ export default function Form4({ opacity, ...props }) {
     <div id="Form4">
         <div class="form1c">   
         <div class="zoncont">
-            
+        
         <Swiper
     loop={true}
     pagination={{
@@ -27,16 +27,19 @@ export default function Form4({ opacity, ...props }) {
     navigation={false}
     modules={[Navigation, Pagination]}
     className="mySwiper"
-    style={{backgroundColor:'#d7d7d7', boxShadow:'0 10px 20px rgb(0 0 0 / 19%), 0 6px 6px rgb(0 0 0 / 23%)', borderRadius:'10px', width:'100%'}}
+    style={{backgroundColor:'#d7d7d7', boxShadow:'0 10px 20px rgb(0 0 0 / 19%), 0 6px 6px rgb(0 0 0 / 23%)', 
+    borderRadius:'10px', width:'100%', borderLeft: 'solid 10px #05b2ab', marginLeft:'-10px'}}
 >
     
     <SwiperSlide>   <StopWatch/></SwiperSlide>
+    
     <SwiperSlide >
-        
+    <div class="h1-custom">Pågående laddning</div>
                 <div id="Zon" class="zon">
                     <div id="Head" class="head">
-                        <div class="headrow">
-                            <div class="h1-custom">Pågående laddning</div>
+                    
+                        <div class="headrow" style={{height:'30px'}}>
+                            
                         </div>
 
                         <p class="ss">burlöv medborgarhuset</p>

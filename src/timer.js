@@ -41,8 +41,9 @@ function StopWatch() {
 
     
         <div id="Head" class="headf4">
-            <div class="headrow">
-                <div class="h1-custom">Pågående laddning</div>
+            <div class="h1-custom">Pågående laddning</div>
+            <div class="headrow" style={{height:'30px'}}>
+                
             </div>
             <Timer time={time} />
    
